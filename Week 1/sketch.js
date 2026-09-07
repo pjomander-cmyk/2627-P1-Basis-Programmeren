@@ -22,3 +22,5 @@ fill('white')
   text ("1" , 4 ,10,900)
   text ("2" , 4 ,70,900) 
   text ("3"  ,4 ,100,900 ) 
+  fill ('black') 
+  
