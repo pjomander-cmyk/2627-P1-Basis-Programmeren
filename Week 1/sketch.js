@@ -40,4 +40,6 @@ fill('white')
   fill ('black') 
   square ( 10,190,20) 
   square (50,190,20 ) 
-  
+ stroke ('black')
+   fill ('white') 
+  square (9,170,70,) 
