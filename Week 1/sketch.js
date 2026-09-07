@@ -36,4 +36,8 @@ fill('white')
   square ( 30,170,20) 
   fill ('white')
   square (50,170,20) 
+  square ( 30,190,20) 
+  fill ('black') 
+  square ( 10,190,20) 
+  square (50,190,20 ) 
   
