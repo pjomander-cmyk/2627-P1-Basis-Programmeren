@@ -54,4 +54,6 @@ fill('white')
   square (140,70,30,150) 
   fill('red')
   square (140,110,30,150) 
+  fill('gray')
+  rect( 145,170,20,50)
   
