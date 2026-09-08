@@ -127,10 +127,9 @@ stroke(0)
  } 
  pop()
  
-  
+ // dit is belangerijk 
 
-  
-
+ text ("8",270,20)
 
   
 
