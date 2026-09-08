@@ -10,6 +10,7 @@ function setup( ) {
 }
 
 function draw() {
+  strokeWeight(1)
   fill('red')
   text("niels", 10,10,100)
 rect(10,70,100,20);
@@ -20,7 +21,8 @@ fill('white')
   fill ('black')
   text ("1" , 4 ,10,900)
   text ("2" , 4 ,70,900) 
-  text ("3"  ,3 ,150,750 ) 
+  text ("3"  ,2,150,750 ) 
+strokeWeight(3)
   fill ('black') 
   square (10,150, 20) 
   square  (50,150,20)
@@ -40,6 +42,7 @@ fill('white')
   square ( 10,190,20) 
   square (50,190,20 ) 
  fill ('black') 
+ strokeWeight(1)
   text("4" ,3 ,220,175 ) 
   fill (0,0,0,0)  
   square (20,250,50) 
@@ -56,6 +59,19 @@ fill('white')
   square (140,110,30,150) 
   fill('gray')
   rect( 145,170,20,50) 
+  fill ( "black") 
+  text ("6" ,120,220,175) 
+  fill ('white ')
+  strokeWeight(4)
+  square (120,245,90) 
+  strokeWeight(1) 
+  fill('black') 
+  square(135,260,15,15)
+  
+
+  
+
+
   
 
 }
