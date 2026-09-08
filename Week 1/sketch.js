@@ -116,7 +116,7 @@ stroke(0)
   color(0,0,0,0 ),
   color(255,0,0),
   color(150,75,0),
-  color(210,180,140) 
+  color(210,180,140), 
  ]
  for(let y = 0; y < mario.length; y++) {
   for(let x = 0; x < mario[y].length; x++)    {
@@ -129,8 +129,41 @@ stroke(0)
  
  // dit is belangerijk 
 
- text ("8",270,20)
+ text ("8",270,20) 
+ 
+ push()
+ translate(280,30)
+ noStroke(); 
 
+ let = px_size = 10 
+
+ const creeper= [
+  //0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+  [ 0,1,2,3,4,5,6,7],
+
+ ]
+
+ // 0 =A 1=B 2=C 3=D 4=E 5=F 6=G 7=H 8=h 
+
+ let creeper_colours = [ 
+  color (154,205,50),
+  color (107,142,35),
+  color (0,128,0),
+  color	(85,107,47) ,
+  color  (152,251,152) ,
+  color  (34,139,34) ,
+  color   ( 0,0,0) ,
+ ] 
+
+ for(let y = 0; y < creeper.length; y++) {
+  for(let x = 0; x < creeper[y].length; x++)    {
+    fill(mario_colours[creeper[y][x]])
+    square(x*px_size, y*px_size, px_size);
+
+  }
+ } 
+ pop()
+ 
   
 
 }
