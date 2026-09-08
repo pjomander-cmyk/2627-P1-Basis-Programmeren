@@ -12,7 +12,7 @@ function setup( ) {
 function draw() {
   strokeWeight(1)
   fill('red')
-  text("niels", 10,10,100)
+  text("niels renger",10,10,100) 
 rect(10,70,100,20);
 fill('white')
   rect (10,90,100, 20);
@@ -63,10 +63,12 @@ strokeWeight(3)
   text ("6" ,120,220,175) 
   fill ('white ')
   strokeWeight(4)
-  square (120,245,90) 
+  square (120,250,70)
   strokeWeight(1) 
   fill('black') 
-  square(135,260,15,15)
+  square(135,260,10,10)
+  square(150,280,10,10)
+  square(165,300,10,10)
   
 
   
