@@ -55,5 +55,7 @@ fill('white')
   fill('red')
   square (140,110,30,150) 
   fill('gray')
-  rect( 145,170,20,50)
+  rect( 145,170,20,50) 
   
+
+}
