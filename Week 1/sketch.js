@@ -10,7 +10,6 @@ function setup( ) {
 }
 
 function draw() {
-  background(220);
   fill('red')
   text("niels", 10,10,100)
 rect(10,70,100,20);
@@ -40,6 +39,9 @@ fill('white')
   fill ('black') 
   square ( 10,190,20) 
   square (50,190,20 ) 
- stroke ('black')
-   fill ('white') 
-  square (9,170,70,) 
+ fill ('black') 
+  text("4" ,3 ,220,175 ) 
+  fill (0,0,0,0)  
+  square (20,250,50) 
+  triangle (20,250,70,250,40,220)
+  
