@@ -87,7 +87,7 @@ stroke(0)
   square(150,280,10,10)
   square(165,300,10,10) 
 
-  text('7' ,20,345)
+  text('7 mario ' ,20,345)
 
 
  push() 
