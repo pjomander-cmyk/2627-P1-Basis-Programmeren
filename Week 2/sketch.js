@@ -14,6 +14,8 @@ function draw() {
   rect (1,425,800,500); 
   fill('green')
   rect (1,410,800,15)
+  fill('gray') 
+  
 
  
  
