@@ -15,9 +15,5 @@ function draw() {
   fill('green')
   rect (1,410,800,15)
   fill('gray') 
-  
-
- 
- 
-
+  triangle
 }
