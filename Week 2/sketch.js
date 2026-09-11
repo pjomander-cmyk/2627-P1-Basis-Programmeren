@@ -32,12 +32,15 @@ function draw() {
   triangle(50,410,190,410,120,290)  
   triangle( 192,410,450,410,305,200)
   triangle (490,410,670,410,560,100)  
+
+
   // de semisatishe elementen de bomen 
-  fill('139,69,19') 
-  rect()
-  rect()
-  rect()
-  rect()
-  rect()
+  strokeWeight(0)
+  fill('brown') 
+  rect(160,520,20,400)
+  rect(330,325,20,100 ) 
+  rect(490,325,20,100)
+  rect(90,325,20,100)
+  rect(200,325,20,100)
 
 }
