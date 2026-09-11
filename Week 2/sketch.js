@@ -37,10 +37,10 @@ function draw() {
   // de semisatishe elementen de bomen 
   strokeWeight(0)
   fill('brown') 
-  rect(160,520,20,400)
+  rect(160,500,20,390)
   rect(330,325,20,100 ) 
   rect(490,325,20,100)
   rect(90,325,20,100)
   rect(200,325,20,100)
-
+   
 }
