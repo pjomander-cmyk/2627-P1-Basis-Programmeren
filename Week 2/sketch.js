@@ -10,22 +10,34 @@ function draw() {
     
   
 ; //dit zijn de statische elementen 
-// de weg
+// de weg 
   fill('gray') 
-  rect (1,425,800,500); 
+  rect (1,425,800,500);  
+  fill('white') 
+  rect(35,500,90,20,20)
+   rect(200,500,90,20,20)
+   rect(370,500,90,20,20)
+ rect(550,500,90,20,20)
+ rect(700,500,90,20,20)
 
 
 
 //het stuk groen tussen de weg en de bergen 
   fill('green')
-  rect (1,410,800,15)  
+  rect (1,410,800,15)
 
 
 // de bergen
   fill(128,128,128)
   triangle(50,410,190,410,120,290)  
   triangle( 192,410,450,410,305,200)
-  triangle (490,410,670,410,560,100)
-
+  triangle (490,410,670,410,560,100)  
+  // de semisatishe elementen de bomen 
+  fill('139,69,19') 
+  rect()
+  rect()
+  rect()
+  rect()
+  rect()
 
 }
