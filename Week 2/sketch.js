@@ -7,6 +7,9 @@ function draw() {
   background(135,206,235 )
   stroke(220) 
 
+  // de basis van de bewegenede delen 
+  let = leaf1
+  let = leafA 
     
   
 ; //dit zijn de statische elementen 
@@ -34,7 +37,7 @@ function draw() {
   triangle (490,410,670,410,560,100)  
 
 
-  // de semisatishe elementen de bomen 
+  // de statishe elementen van de boom 
   strokeWeight(0)
   fill('brown') 
   rect(160,500,20,390)
