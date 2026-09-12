@@ -82,6 +82,7 @@ stroke(0)
   square(150,280,10,10)
   square(165,300,10,10) 
 
+  strokeWeight(0)
   text('7 mario ' ,20,345)
 
 
