@@ -1,5 +1,11 @@
 let positiex = 175;
-let boomachtergrondlinks = 40
+let boomachtergrondlinks = 90
+let richting = 02;
+let  boomachtergrondrechts = 620
+let debladevoorsteboom =175
+let  deblachboomlinksachter =90
+let debladSboomrechtsachter =570
+let  richting2 =02
 
 
 function setup() {
@@ -30,8 +36,19 @@ function draw() {
   // de bewegende elementen van de bomen
   fill("green")
   circle(positiex, 470, 70, 90, 70)
-  positiex = positiex + 1;
-  if (positiex > 220) positiex = 175;
+  positiex = positiex + richting;
+  if (positiex > 220)
+  {
+    richting = -1;
+  }
+   if (positiex < 174)
+  {
+    richting = 1;
+  }
+    
+  fill("green")
+   circle( boomachtergrondlinks,300,70,90,70) 
+   boomachtergrondlinks = boomachtergrondlinks + richting;
 
     
 
@@ -54,9 +71,48 @@ function draw() {
   strokeWeight(0)
   fill('brown')
   rect(178, 500, 20, 390)
-  rect(30, 325, 20, 100)
+  rect(80, 325, 20, 100)
   rect(600, 325, 20, 100)
-  //ct(90, 325, 20, 100)
+  
+
+  // de bewegende elementen van de bomen 
+  // de bewegemde elementen van de boom voor de weg
+  fill("green")
+  circle(positiex, 470, 70, 90, 70)
+  positiex = positiex + richting;
+  if (positiex > 220)
+  {
+    richting = -1;
+  }
+   if (positiex < 174)
+  {
+    richting = 1;
+  }
+   // bewegende elementen van de boom links 
+  fill("green")
+   circle( boomachtergrondlinks,300,70,90,70) 
+   boomachtergrondlinks = boomachtergrondlinks + richting;
+
+
+
+
+
+
+
+//bewegende elementen van de rechter boom 
+fill("green")
+circle(boomachtergrondrechts,300,70,90,70) 
+boomachtergrondrechts = boomachtergrondrechts + richting; 
+if(boomachtergrondrechts > 320)
+fill(152,251,152) 
+circle(debladSboomrechtsachter,300,70,90,70)
+debladSboomrechtsachter = debladSboomrechtsachter + richting; 
+
+
+
+
+
+
 
 
   // stoplicht statish
