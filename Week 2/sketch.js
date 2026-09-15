@@ -6,7 +6,20 @@ let debladevoorsteboom =175
 let  deblachboomlinksachter =90;
 let debladSboomrechtsachter =600;
 let  richting2 =2;
-let  timer = 0;
+let  timer = 0; 
+let statusstoplicht = "groen" 
+
+
+//logica stoplicht en auto snelheid 
+function keypressed(){ 
+  if (keyCode === 13){ 
+    console.log ("13")
+  }  
+} 
+
+
+
+
 
 function setup() {
   createCanvas(800, 600);
@@ -119,6 +132,16 @@ fill("green")
   }
 fill(0,255,0) 
 circle(debladevoorsteboom,470,70,90,70)
+debladevoorsteboom = debladevoorsteboom + richting;
+if(debladevoorsteboom >230) 
+{ 
+  richting-1;
+} 
+if (debladevoorsteboom < 172 ) 
+{
+   richting = 1; 
+} 
+
 
 
 
@@ -134,10 +157,3 @@ circle(debladevoorsteboom,470,70,90,70)
   fill('green')
   square(685, 293, 30, 30)
 }
-
-
-// logica stoplicht 
-function keyPressed() {
-  if (key === "enter")
-    console.log("enter enter ")
-}  
