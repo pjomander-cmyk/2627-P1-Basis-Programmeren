@@ -1,12 +1,12 @@
 let positiex = 175;
 let boomachtergrondlinks = 90
-let richting = 02;
-let  boomachtergrondrechts = 620
+let richting = 2
+let  boomachtergrondrechts = 580
 let debladevoorsteboom =175
-let  deblachboomlinksachter =90
-let debladSboomrechtsachter =570
-let  richting2 =02
-
+let  deblachboomlinksachter =90;
+let debladSboomrechtsachter =600;
+let  richting2 =2;
+let  timer = 0;
 
 function setup() {
   createCanvas(800, 600);
@@ -92,7 +92,7 @@ function draw() {
   fill("green")
    circle( boomachtergrondlinks,300,70,90,70) 
    boomachtergrondlinks = boomachtergrondlinks + richting;
-
+   circle
 
 
 
@@ -106,9 +106,8 @@ boomachtergrondrechts = boomachtergrondrechts + richting;
 if(boomachtergrondrechts > 320)
 fill(152,251,152) 
 circle(debladSboomrechtsachter,300,70,90,70)
-debladSboomrechtsachter = debladSboomrechtsachter + richting; 
-
-
+debladSboomrechtsachter = debladSboomrechtsachter + richting;  
+if(debladSboomrechtsachter > 540)   richting2 - 1;
 
 
 
