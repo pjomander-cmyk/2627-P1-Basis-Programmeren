@@ -33,22 +33,9 @@ function draw() {
   rect(550, 500, 90, 20, 20)
   rect(700, 500, 90, 20, 20)
 
-  // de bewegende elementen van de bomen
-  fill("green")
-  circle(positiex, 470, 70, 90, 70)
-  positiex = positiex + richting;
-  if (positiex > 220)
-  {
-    richting = -1;
-  }
-   if (positiex < 174)
-  {
-    richting = 1;
-  }
+  
     
-  fill("green")
-   circle( boomachtergrondlinks,300,70,90,70) 
-   boomachtergrondlinks = boomachtergrondlinks + richting;
+  
 
     
 
@@ -92,9 +79,19 @@ function draw() {
   fill("green")
    circle( boomachtergrondlinks,300,70,90,70) 
    boomachtergrondlinks = boomachtergrondlinks + richting;
-   circle
+   fill (143,188,143)
+   circle(deblachboomlinksachter,300,70,90,70) 
+   deblachboomlinksachter = deblachboomlinksachter + richting2 
+   if(deblachboomlinksachter >120)
+   { 
+    richting2 = -1; 
+   } 
+   if(deblachboomlinksachter < 80)
+   {
+    richting2  = +1;
+   } 
 
-
+text(deblachboomlinksachter,50,50)
 
 
 
@@ -108,8 +105,20 @@ fill(152,251,152)
 circle(debladSboomrechtsachter,300,70,90,70)
 debladSboomrechtsachter = debladSboomrechtsachter + richting;  
 if(debladSboomrechtsachter > 540)   richting2 - 1;
-
-
+//de bewegende elementen van de boom op de voorgrond 
+fill("green")
+  circle(positiex, 470, 70, 90, 70)
+  positiex = positiex + richting;
+  if (positiex > 220)
+  {
+    richting = -1;
+  }
+   if (positiex < 174)
+  {
+    richting = 1;
+  }
+fill(0,255,0) 
+circle(debladevoorsteboom,470,70,90,70)
 
 
 
