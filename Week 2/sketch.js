@@ -11,11 +11,13 @@ let statusstoplicht = "groen"
 
 
 //logica stoplicht en auto snelheid 
-function keypressed(){ 
-  if (keyCode === 13){ 
-    console.log ("13")
-  }  
-} 
+function keyPressed() {
+  
+  // Code to run.
+  console.log("key is pressed");
+  }   
+
+
 
 
 
@@ -141,6 +143,7 @@ if (debladevoorsteboom < 172 )
 {
    richting = 1; 
 } 
+// einde van bomen bewegende functie 
 
 
 
@@ -150,10 +153,8 @@ if (debladevoorsteboom < 172 )
   fill('gray')
   rect(690, 325, 20, 140)
   rect(675, 225, 50, 100)
-  fill('red')
+  fill("192,192,192") 
   square(685, 230, 30, 30)
-  fill('orange')
   square(685, 262, 30, 30)
-  fill('green')
   square(685, 293, 30, 30)
 }
