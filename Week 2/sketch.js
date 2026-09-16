@@ -8,7 +8,10 @@ let debladSboomrechtsachter = 600;
 let richting2 = 2;
 let timer = 0;
 let statusstoplicht = "groen"
-
+let auto1onderkant = 10;
+let auto1bovenkant = 29;
+let voorwielauto1 = 80;
+let globaalesnelheid = 2;
 
 //logica stoplicht en auto snelheid 
 function keyPressed() {
@@ -27,7 +30,7 @@ function keyPressed() {
       statusstoplicht = "groen";
       return;
     }
-    
+
   }
 }
 
@@ -94,15 +97,7 @@ function draw() {
 
   // de bewegende elementen van de bomen 
   // de bewegemde elementen van de boom voor de weg
-  fill("green")
-  circle(positiex, 470, 70, 90, 70)
-  positiex = positiex + richting;
-  if (positiex > 220) {
-    richting = -1;
-  }
-  if (positiex < 174) {
-    richting = 1;
-  }
+ 
   // bewegende elementen van de boom links 
   fill("green")
   circle(boomachtergrondlinks, 300, 70, 90, 70)
@@ -167,24 +162,75 @@ function draw() {
   if (statusstoplicht == "groen") {
     fill("green")
     square(685, 293, 30, 30)
+    if(statusstoplicht == "groen") globaalesnelheid = 5;
   }
   if (statusstoplicht == "oranje") {
     fill("orange")
     square(685, 262, 30, 30)
+    if (statusstoplicht == "oranje") globaalesnelheid = 1;
   }
   if (statusstoplicht == "rood") {
     fill("red")
     square(685, 230, 30, 30)
+    if(statusstoplicht == "rood") globaalesnelheid = 0;
+
   }
 
 
-//de auto's 
-fill("orange") 
-rect(20, 440,50,50)
-rect (10,460,70,30)
-fill("black") 
-circle(20,490,20,20)
-circle (65,490,20,20)
+  //de auto's  
 
 
+  fill("orange")
+  rect(auto1bovenkant, 430, 50, 30)
+  rect(auto1onderkant, 450, 90, 30)
+  fill("black")
+  circle(voorwielauto1, 490, 20, 20, 30)
+  circle(auto1bovenkant, 490, 20, 20, 20)
+  auto1onderkant = auto1onderkant + globaalesnelheid
+  auto1bovenkant = auto1bovenkant + globaalesnelheid
+  voorwielauto1 = voorwielauto1 + globaalesnelheid 
+  if (auto1onderkant > 900) auto1onderkant = -20
+  if (auto1bovenkant > 900) auto1bovenkant = -20;
+  if (voorwielauto1 > 900) voorwielauto1 = -20
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//boom voorgrond 
+fill("green")
+  circle(positiex, 470, 70, 90, 70)
+  positiex = positiex + richting;
+  if (positiex > 220) {
+    richting = -1;
+  }
+  if (positiex < 174) {
+    richting = 1;
+  } 
+  fill(0, 255, 0)
+  circle(debladevoorsteboom, 470, 70, 90, 70)
+  debladevoorsteboom = debladevoorsteboom + richting;
+  if (debladevoorsteboom > 230) {
+    richting - 1;
+  }
+  if (debladevoorsteboom < 172) {
+    richting = 1;
+  }
 }
