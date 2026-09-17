@@ -27,7 +27,9 @@ let wolk3 = 60 ;
 let wolk4 = 80;
 let wolk5 = 100;
 let wolk6 = 120;
-let  zon 
+let  zon  =  10 ;
+let zon2  =  10 ;
+
 //logica stoplicht en auto snelheid 
 function keyPressed() {
   if (key === "Enter") {
@@ -272,9 +274,28 @@ function draw() {
   wolk4 = wolk4 + 2
   wolk5 = wolk5 + 2
   wolk6 = wolk6 + 2
- if (wolk4 > 2000) wolk4 = -100
-  if (wolk5 > 2000) wolk5 = -100
-  if (wolk6 > 2000) wolk6 = -100 
+ if (wolk4 > 2000) wolk4 = -1500
+  if (wolk5 > 2000) wolk5 = -1500
+  if (wolk6 > 2000) wolk6 = -1500 
+
+
+
+
+
+
+
+
+
+// zon
+fill("yellow")
+circle (zon,50,50,5)
+zon = zon + 0.2
+if(zon > 800) zon = -20
+
+fill(255,140,0,164)
+circle(zon2,50,70,50)
+zon2 = zon2 +0.2
+if (zon2 > 800) + 0.2 
 
 
 
@@ -290,7 +311,4 @@ function draw() {
 
 
 
-
-
-
-}
+} 
