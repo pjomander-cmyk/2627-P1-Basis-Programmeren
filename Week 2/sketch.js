@@ -1,18 +1,26 @@
 let positiex = 175;
-let boomachtergrondlinks = 90
-let richting = 2
+let boomachtergrondlinks = 120;
+let richting = 4;
 let boomachtergrondrechts = 580
 let debladevoorsteboom = 175
 let deblachboomlinksachter = 90;
 let debladSboomrechtsachter = 600;
-let richting2 = 2;
+let richting2 = 1;
 let timer = 0;
 let statusstoplicht = "groen"
 let auto1onderkant = 10;
 let auto1bovenkant = 29;
 let voorwielauto1 = 80;
 let globaalesnelheid = 2;
-
+let auto2bovenkant = 270;
+let auto2onderkant = 250;
+let voorwielauto2 = 330;
+let achterwielauto2 = 260;
+let richting3       = 2; 
+let richting4         =4;
+let richting5         =5 
+let richting6        =5 
+let richting7        =5
 //logica stoplicht en auto snelheid 
 function keyPressed() {
   if (key === "Enter") {
@@ -42,6 +50,9 @@ function keyPressed() {
 
 
 function setup() {
+  fill("red")
+
+
   createCanvas(800, 600);
 }
 
@@ -97,11 +108,36 @@ function draw() {
 
   // de bewegende elementen van de bomen 
   // de bewegemde elementen van de boom voor de weg
- 
+  fill("green")
+  circle(positiex, 470, 70, 90, 70)
+  positiex = positiex + richting4
+  if (positiex > 220) {
+    richting4 = -1;
+  }
+  if (positiex < 170) {
+    richting4 = + 1; 
+  }
+  fill(0, 255, 0)
+  circle(debladevoorsteboom, 470, 70, 90, 70)
+  debladevoorsteboom = debladevoorsteboom + richting5;
+  if (debladevoorsteboom > 225) {
+    richting5 = -1 
+  }
+  if (debladevoorsteboom < 170) {
+    richting5 = + 1;
+  }
+
   // bewegende elementen van de boom links 
   fill("green")
   circle(boomachtergrondlinks, 300, 70, 90, 70)
-  boomachtergrondlinks = boomachtergrondlinks + richting;
+  boomachtergrondlinks = boomachtergrondlinks + richting3;
+  if ( boomachtergrondlinks>130) {
+    richting3 = - 1  
+  } 
+  if( boomachtergrondlinks < 80 ) { 
+    richting3 =  + 1 
+  } 
+
   fill(143, 188, 143)
   circle(deblachboomlinksachter, 300, 70, 90, 70)
   deblachboomlinksachter = deblachboomlinksachter + richting2
@@ -112,7 +148,7 @@ function draw() {
     richting2 = +1;
   }
 
-  text(deblachboomlinksachter, 50, 50)
+  text(boomachtergrondlinks, 50, 50)
 
 
 
@@ -120,31 +156,19 @@ function draw() {
   //bewegende elementen van de rechter boom 
   fill("green")
   circle(boomachtergrondrechts, 300, 70, 90, 70)
-  boomachtergrondrechts = boomachtergrondrechts + richting;
-  if (boomachtergrondrechts > 320)
-    fill(152, 251, 152)
-  circle(debladSboomrechtsachter, 300, 70, 90, 70)
-  debladSboomrechtsachter = debladSboomrechtsachter + richting;
-  if (debladSboomrechtsachter > 540) richting2 - 1;
-  //de bewegende elementen van de boom op de voorgrond 
-  fill("green")
-  circle(positiex, 470, 70, 90, 70)
-  positiex = positiex + richting;
-  if (positiex > 220) {
-    richting = -1;
-  }
-  if (positiex < 174) {
-    richting = 1;
-  }
-  fill(0, 255, 0)
-  circle(debladevoorsteboom, 470, 70, 90, 70)
-  debladevoorsteboom = debladevoorsteboom + richting;
-  if (debladevoorsteboom > 230) {
-    richting - 1;
-  }
-  if (debladevoorsteboom < 172) {
-    richting = 1;
-  }
+  boomachtergrondrechts = boomachtergrondrechts + richting6;
+  if (boomachtergrondrechts > 320){ 
+    richting6 = - 1
+  } 
+  if (boomachtergrondlinks < 295 ) { 
+    richting6 = + 1 
+  } 
+   // fill(152, 251, 152)
+ // circle(debladSboomrechtsachter, 300, 70, 90, 70)
+ // debladSboomrechtsachter = debladSboomrechtsachter + richting7;
+//  if (debladSboomrechtsachter > 540) richting7 - 1;
+  
+
   // einde van bomen bewegende functie 
 
 
@@ -162,7 +186,7 @@ function draw() {
   if (statusstoplicht == "groen") {
     fill("green")
     square(685, 293, 30, 30)
-    if(statusstoplicht == "groen") globaalesnelheid = 5;
+    if (statusstoplicht == "groen") globaalesnelheid = 5;
   }
   if (statusstoplicht == "oranje") {
     fill("orange")
@@ -172,27 +196,41 @@ function draw() {
   if (statusstoplicht == "rood") {
     fill("red")
     square(685, 230, 30, 30)
-    if(statusstoplicht == "rood") globaalesnelheid = 0;
+    if (statusstoplicht == "rood") globaalesnelheid = 0;
 
   }
 
 
   //de auto's  
 
-
+  //auto 1
   fill("orange")
   rect(auto1bovenkant, 430, 50, 30)
   rect(auto1onderkant, 450, 90, 30)
   fill("black")
   circle(voorwielauto1, 490, 20, 20, 30)
-  circle(auto1bovenkant, 490, 20, 20, 20)
+  circle(auto1bovenkant, 490, 20, 20, 30)
   auto1onderkant = auto1onderkant + globaalesnelheid
   auto1bovenkant = auto1bovenkant + globaalesnelheid
-  voorwielauto1 = voorwielauto1 + globaalesnelheid 
-  if (auto1onderkant > 900) auto1onderkant = -20
-  if (auto1bovenkant > 900) auto1bovenkant = -20;
-  if (voorwielauto1 > 900) voorwielauto1 = -20
-  
+  voorwielauto1 = voorwielauto1 + globaalesnelheid
+  if (auto1onderkant > 1200) auto1onderkant = -70;
+  if (auto1bovenkant > 1200) auto1bovenkant = -70;
+  if (voorwielauto1 > 1200) voorwielauto1 = -70;
+  // auto 2 
+  fill("red")
+  rect(auto2bovenkant, 430, 50, 30)
+  rect(auto2onderkant, 450, 90, 30)
+  fill("black")
+  circle(achterwielauto2, 490, 20, 20, 20)
+  circle(voorwielauto2, 490, 20, 20, 20)
+  auto2bovenkant = auto2bovenkant + globaalesnelheid
+  auto2onderkant = auto2onderkant + globaalesnelheid
+  achterwielauto2 = achterwielauto2 + globaalesnelheid;
+  voorwielauto2 = voorwielauto2 + globaalesnelheid;
+  if (auto2bovenkant > 900) auto2bovenkant = -70;
+  if (auto2onderkant > 900) auto2onderkant = -70;
+  if (achterwielauto2 > 900) achterwielauto2 = -70;
+  if (voorwielauto2 > 900) voorwielauto2 = -70;
 
 
 
@@ -212,25 +250,6 @@ function draw() {
 
 
 
+  //boom voorgrond 
 
-
-//boom voorgrond 
-fill("green")
-  circle(positiex, 470, 70, 90, 70)
-  positiex = positiex + richting;
-  if (positiex > 220) {
-    richting = -1;
-  }
-  if (positiex < 174) {
-    richting = 1;
-  } 
-  fill(0, 255, 0)
-  circle(debladevoorsteboom, 470, 70, 90, 70)
-  debladevoorsteboom = debladevoorsteboom + richting;
-  if (debladevoorsteboom > 230) {
-    richting - 1;
-  }
-  if (debladevoorsteboom < 172) {
-    richting = 1;
-  }
 }
