@@ -18,12 +18,16 @@ let voorwielauto2 = 360;
 let achterwielauto2 = 430;
 let richting3 = 2;
 let richting4 = 4;
-let richting5 = 5
-let richting6 = 5
-let richting7 = 5
-let wolk1 = 30
-let wolk2 = 50
-let wolk3 = 60
+let richting5 = 5;
+let richting6 = 5;
+let richting7 = 5;
+let wolk1 = 30;
+let wolk2 = 50;
+let wolk3 = 60 ;
+let wolk4 = 80;
+let wolk5 = 100;
+let wolk6 = 120;
+let  zon 
 //logica stoplicht en auto snelheid 
 function keyPressed() {
   if (key === "Enter") {
@@ -240,7 +244,8 @@ function draw() {
 
 
 
-  //wolken 
+  //wolken  
+  // wolk numer 1
   fill("gray")
   circle(wolk1, 80, 40, 40)
   circle(wolk2, 75, 40, 40)
@@ -254,7 +259,23 @@ function draw() {
   wolk3 = wolk3 + 1
   if (wolk1 > 1000) wolk1 = -100
   if (wolk2 > 1000) wolk2 = -100
-  if (wolk3 > 1000) wolk3 = -100
+  if (wolk3 > 1000) wolk3 = -100 
+  //wolk nummer 2
+  fill("gray")
+  circle(wolk4,80,40,40)
+  circle(wolk5,75,40,40)
+  circle(wolk6,80,40,40) 
+  fill("white")
+  circle(wolk4,82,40,40)
+  circle(wolk5,77,40,40)
+  circle(wolk6,82,40,40)
+  wolk4 = wolk4 + 2
+  wolk5 = wolk5 + 2
+  wolk6 = wolk6 + 2
+ if (wolk4 > 2000) wolk4 = -100
+  if (wolk5 > 2000) wolk5 = -100
+  if (wolk6 > 2000) wolk6 = -100 
+
 
 
 
