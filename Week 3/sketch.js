@@ -42,9 +42,29 @@ square(360,130,100 )
 square(360,235,100 ) 
 square(360,340,100 ) 
 // einde van de statishe elementen van het bord
+
+
+//de meeting van de coordinaten 
 fill("black") 
-text(muisxvak1,100,100)
+ text("mouseX;"+mouseX,50,50)
+ text("mouseY;" + mouseY,50,60) 
+ // einde van de meetingcode 
+ 
+ //cordinaten van de vakjes 
+ //vak1 X 140 tot239 y van 130 tot 230
+ //vak2 x 140 tot 239 y van 235tot 330
+ //vak3 x 140 tot 239 y van 340 tot 440
+ //vak4 x 250 tot 350 y van 130 tot 230
+ //vak5 x 250 tot 350 y van 235tot 330
+ //vak6 x 250 tot 350 y van 340 tot 435
+ //vak7 x 360 tot 460 y van 130 tot 230
+//vak8 x 360 tot 460  y van 235 tot 330
+//vaK9x 360 tot 460   y van 340 tot 435 
+} 
 
+//clickfuncties 
+function mouseClicked() { 
+  if(mouseX >140 && mouseX <240 && mouseY >130 && mouseY <230 ){ 
+  } 
 
-
-}
+  } 
