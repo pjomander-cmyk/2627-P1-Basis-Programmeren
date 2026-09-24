@@ -12,6 +12,7 @@ let speler = "speler1"
 let vak1X = 140;
 let vak1Y = 130;
 let vakSize = 100;
+let wincoditie = 0
 
 
 function changePlayer() {
@@ -22,14 +23,14 @@ function changePlayer() {
   else if (speler == "speler2") {
     speler = "speler1";
     return;
-  } 
-} 
+  }
+}
 // logica van het inkleuren 
 function mouseClicked() {
   if (mouseX > vak1X && mouseX < vak1X + vakSize && mouseY > 130 && mouseY < 230) {
     vak1 = speler;
     changePlayer();
-   }
+  }
 
   if (mouseX > 140 && mouseX < 240 && mouseY > 235 && mouseY < 335) {
     vak2 = speler;
@@ -43,79 +44,79 @@ function mouseClicked() {
   if (mouseX > 250 && mouseX < 350 && mouseY > 130 && mouseY < 230) {
     vak4 = speler;
     changePlayer();
-  } 
+  }
 
 
-  if(mouseX > 250 && mouseX < 350 && mouseY > 235 && mouseY < 330) {
+  if (mouseX > 250 && mouseX < 350 && mouseY > 235 && mouseY < 330) {
     vak5 = speler;
     changePlayer();
-  } 
+  }
 
-    if(mouseX > 250 && mouseX < 350 && mouseY >340 && mouseY < 435) {
-      vak6 = speler;
-      changePlayer();
-    } 
-    if(mouseX > 360 && mouseX < 460 && mouseY >130 && mouseY < 230) {
-      vak7 = speler;
-      changePlayer();
-    } 
-    if(mouseX > 360 && mouseX < 460 && mouseY >235 && mouseY < 330) {
-      vak8 = speler;
-      changePlayer();
-    } 
-    if(mouseX > 360 && mouseX < 460 && mouseY >340 && mouseY < 435) {
-      vak9 = speler;
-      changePlayer();
-    } 
-  } 
+  if (mouseX > 250 && mouseX < 350 && mouseY > 340 && mouseY < 435) {
+    vak6 = speler;
+    changePlayer();
+  }
+  if (mouseX > 360 && mouseX < 460 && mouseY > 130 && mouseY < 230) {
+    vak7 = speler;
+    changePlayer();
+  }
+  if (mouseX > 360 && mouseX < 460 && mouseY > 235 && mouseY < 330) {
+    vak8 = speler;
+    changePlayer();
+  }
+  if (mouseX > 360 && mouseX < 460 && mouseY > 340 && mouseY < 435) {
+    vak9 = speler;
+    changePlayer();
+  }
+}
 
-    function setup() {
-      createCanvas(600, 600);
-    }
-    function draw() {
-      background(0, 255, 255);
+function setup() {
+  createCanvas(600, 600);
+}
+function draw() {
+  background(0, 255, 255);
 
-      //bordjes van het bord statiche elementen
+  //bordjes van het bord statiche elementen
 
-      fill("black")
-      square(125, 110, 350)
+  fill("black")
+  square(125, 110, 350)
 
-      fill("255,255,255")
-      strokeWeight(0)
-      square(140, 130, 100)
-      square(140, 235, 100)
-      square(140, 340, 100)
-      //2de rij
-      square(250, 130, 100)
-      square(250, 235, 100)
-      square(250, 340, 100)
-      //3de rij 
-      square(360, 130, 100)
-      square(360, 235, 100)
-      square(360, 340, 100)
-      // einde van de statishe elementen van het bord
-
-
+  fill("255,255,255")
+  strokeWeight(0)
+  square(140, 130, 100)
+  square(140, 235, 100)
+  square(140, 340, 100)
+  //2de rij
+  square(250, 130, 100)
+  square(250, 235, 100)
+  square(250, 340, 100)
+  //3de rij 
+  square(360, 130, 100)
+  square(360, 235, 100)
+  square(360, 340, 100)
+  // einde van de statishe elementen van het bord
 
 
 
 
 
 
-      //cordinaten van de vakjes 
-      //vak1 X 140 tot239 y van 130 tot 230
-      //vak2 x 140 tot 239 y van 235tot 330
-      //vak3 x 140 tot 239 y van 340 tot 440
-      //vak4 x 250 tot 350 y van 130 tot 230
-      //vak5 x 250 tot 350 y van 235tot 330
-      //vak6 x 250 tot 350 y van 340 tot 435
-      //vak7 x 360 tot 460 y van 130 tot 230
-      //vak8 x 360 tot 460  y van 235 tot 330
-      //vaK9x 360 tot 460   y van 340 tot 435  
 
 
-      // inkleuren 
-      if (vak1 == "speler1") { //speler === "speler1" && 
+  //cordinaten van de vakjes 
+  //vak1 X 140 tot239 y van 130 tot 230
+  //vak2 x 140 tot 239 y van 235tot 330
+  //vak3 x 140 tot 239 y van 340 tot 440
+  //vak4 x 250 tot 350 y van 130 tot 230
+  //vak5 x 250 tot 350 y van 235tot 330
+  //vak6 x 250 tot 350 y van 340 tot 435
+  //vak7 x 360 tot 460 y van 130 tot 230
+  //vak8 x 360 tot 460  y van 235 tot 330
+  //vaK9x 360 tot 460   y van 340 tot 435  
+
+
+  // inkleuren 
+ if (vak1 == "speler1") { //speler === "speler1" && 
         fill("blue")
         rect(140, 130, 100)
       }
