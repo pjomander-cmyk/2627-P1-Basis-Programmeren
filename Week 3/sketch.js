@@ -25,6 +25,8 @@ function changePlayer() {
     speler = "speler1";
     return;
   }
+   
+
 }
 
 // logica van het inkleuren 
@@ -119,12 +121,11 @@ function mouseClicked() {
       winconditie = 2  
     } 
      if ( vak1 && vak5 && vak9 == "speler2" ) {  
-      winconditie = 2
+      winconditie = 2 
+
+      // logica van de tekst van wie aan de beurt is 
     }  
-   if(speler == "speler1" ){ 
-    fill("red") 
-    text( "speler1 is aan de beurt"  ,100,100 ) 
-   } 
+   
 
   } 
 
@@ -155,7 +156,9 @@ function mouseClicked() {
       // einde van de statishe elementen van het bord
 
 
-
+    //test 
+   // fill("red")
+   // text("test",10,100,100)
 
 
 
@@ -173,7 +176,7 @@ function mouseClicked() {
       //vaK9x 360 tot 460   y van 340 tot 435  
 
 
-      // inkleuren 
+      // logica van wie er aan de beurt is 
       if (vak1 == "speler1") { //speler === "speler1" && 
         fill("blue")
         rect(140, 130, 100)
