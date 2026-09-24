@@ -71,7 +71,7 @@ function mouseClicked() {
       changePlayer();
     }  
 
-
+    //wincoditsies speler 2
     if ( vak1 && vak2 && vak3 == "speler2" ) { 
       winconditie = 2  
     } 
@@ -91,19 +91,20 @@ function mouseClicked() {
       winconditie = 2 
     } 
     if ( vak3 && vak5 && vak7 == "speler2" ) {  
-      winconditie = 2  
+      winconditie = 2
     } 
+    //wincoditie speler 2
      if ( vak1 && vak5 && vak9 == "speler2" ) {  
-      winconditie = 2 
+      winconditie = 2
     } 
      if ( vak1 && vak2 && vak3 == "speler2" ) { 
-      winconditie = 2 
+      winconditie = 2
     } 
      if ( vak4 && vak5 && vak6 == "speler2"  ) { 
-      winconditie = 2  
+      winconditie = 2
     } 
       if ( vak7 && vak8 && vak9 == "speler2" ) { 
-      winconditie = 2  
+      winconditie = 2
     } 
       if ( vak1 && vak4 && vak7 == "speler2" ) {  
       winconditie = 2
