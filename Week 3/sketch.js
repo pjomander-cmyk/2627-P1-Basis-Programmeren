@@ -13,7 +13,16 @@ let vak1X = 140;
 let vak1Y = 130;
 let vakSize = 100;
 let winaar = 0 
+let reset  = 0 
 
+
+function keyPressed (){
+  if(keyCode == 13 ) reset = 1 
+  if(reset == 1)
+     (vak1 && vak2 && vak3 && vak4 && vak5 && vak6 && vak7 && vak8 && vak9 == speeler0 )
+} 
+  
+    
 
 function changePlayer() {
   if (speler == "speler1") {
@@ -69,17 +78,43 @@ function mouseClicked() {
     changePlayer();
   }
   //logica van de winaar bepaalen 
-  function checkWinner() {
+  function checkWinner() { 
 
-if (winaar == "speler1") {
-  console.log("Speler 1 heeft gewonnen!");
+  // Speler 1
+  if (
+    (vak1 == "speler1" && vak2 == "speler1" && vak3 == "speler1") 
+    (vak4 == "speler1" && vak5 == "speler1" && vak6 == "speler1") 
+    (vak7 == "speler1" && vak8 == "speler1" && vak9 == "speler1") 
+    (vak1 == "speler1" && vak4 == "speler1" && vak7 == "speler1") 
+    (vak2 == "speler1" && vak5 == "speler1" && vak8 == "speler1") 
+    (vak3 == "speler1" && vak6 == "speler1" && vak9 == "speler1") 
+    (vak1 == "speler1" && vak5 == "speler1" && vak9 == "speler1") 
+    (vak3 == "speler1" && vak5 == "speler1" && vak7 == "speler1")
+  ) {
+    winaar = 1 ;
+  }
+
+  // Speler 2
+  if (
+    (vak1 == "speler2" && vak2 == "speler2" && vak3 == "speler2") 
+    (vak4 == "speler2" && vak5 == "speler2" && vak6 == "speler2") 
+    (vak7 == "speler2" && vak8 == "speler2" && vak9 == "speler2") 
+    (vak1 == "speler2" && vak4 == "speler2" && vak7 == "speler2") 
+    (vak2 == "speler2" && vak5 == "speler2" && vak8 == "speler2") 
+    (vak3 == "speler2" && vak6 == "speler2" && vak9 == "speler2") 
+    (vak1 == "speler2" && vak5 == "speler2" && vak9 == "speler2") 
+    (vak3 == "speler2" && vak5 == "speler2" && vak7 == "speler2")
+  ) {
+    winaar = 2;
+  }
 }
 
-if (winaar == "speler2") {
-  console.log("Speler 2 heeft gewonnen!");
+
+
+
+
 }
-  } 
-}
+
 
 function setup() {
   createCanvas(600, 600);
@@ -107,8 +142,17 @@ function draw() {
   square(360, 340, 100)
   // einde van de statishe elementen van het bord
 
-
-
+//winaar tonen 
+if(winaar == "1"){
+  fill("blue") 
+text("speler1wint",150,50,50) 
+console.log("speler1wint") 
+} 
+if(winaar == "2"){ 
+  fill("red") 
+  text("speler2wint",150,50,50) 
+  console.log("speler2wint") 
+} 
 
 
 
