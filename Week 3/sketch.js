@@ -72,30 +72,59 @@ function mouseClicked() {
     }  
 
 
-    if ( vak1 && vak2 && vak3 == player1 ) { 
-      winconditie = 1  
+    if ( vak1 && vak2 && vak3 == "speler2" ) { 
+      winconditie = 2  
     } 
-     if ( vak4 && vak5 && vak6 == player1 ) { 
-      winconditie = 1  
+     if ( vak4 && vak5 && vak6 == "speler2" ) { 
+      winconditie = 2 
     } 
-      if ( vak7 && vak8 && vak9 == player1 ) { 
-      winconditie = 1  
+      if ( vak7 && vak8 && vak9 == "speler2" ) { 
+      winconditie = 2 
     } 
-      if ( vak1 && vak4 && vak7 == player1 ) {  
-      winconditie = 1  
+      if ( vak1 && vak4 && vak7 ==  "speler2" ) {  
+      winconditie = 2 
     } 
-      if ( vak2 && vak5 && vak8 == player1 ) {  
-      winconditie = 1  
+      if ( vak2 && vak5 && vak8 == "speler2" ) {  
+      winconditie = 2 
     } 
- if ( vak3 && vak6 && vak9 == player1 ) {  
-      winconditie = 1  
+ if ( vak3 && vak6 && vak9 == "speler2" ) {  
+      winconditie = 2 
     } 
-    if ( vak3 && vak5 && vak7 == player1 ) {  
-      winconditie = 1  
+    if ( vak3 && vak5 && vak7 == "speler2" ) {  
+      winconditie = 2  
     } 
-     if ( vak1 && vak5 && vak9 == player1 ) {  
-      winconditie = 1  
+     if ( vak1 && vak5 && vak9 == "speler2" ) {  
+      winconditie = 2 
     } 
+     if ( vak1 && vak2 && vak3 == "speler2" ) { 
+      winconditie = 2 
+    } 
+     if ( vak4 && vak5 && vak6 == "speler2"  ) { 
+      winconditie = 2  
+    } 
+      if ( vak7 && vak8 && vak9 == "speler2" ) { 
+      winconditie = 2  
+    } 
+      if ( vak1 && vak4 && vak7 == "speler2" ) {  
+      winconditie = 2
+    } 
+      if ( vak2 && vak5 && vak8 == "speler2" ) {  
+      winconditie = 2
+    } 
+ if ( vak3 && vak6 && vak9 == "speler2" ) {  
+      winconditie = 2  
+    } 
+    if ( vak3 && vak5 && vak7 == "speler2" ) {  
+      winconditie = 2  
+    } 
+     if ( vak1 && vak5 && vak9 == "speler2" ) {  
+      winconditie = 2
+    }  
+   if(speler == "speler1" ){ 
+    fill("red") 
+    text( "speler1 is aan de beurt"  ,100,100 ) 
+   } 
+
   } 
 
     function setup() {
@@ -167,7 +196,7 @@ function mouseClicked() {
       }
       if (vak3 == "speler2") {
         fill("red")
-        rect(140, 440, 100)
+        rect(140, 340, 100)
       }
       if (vak4 == "speler1") {
         fill("blue")
