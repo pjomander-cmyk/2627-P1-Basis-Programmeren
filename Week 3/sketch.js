@@ -12,7 +12,7 @@ let speler = "speler1"
 let vak1X = 140;
 let vak1Y = 130;
 let vakSize = 100;
-let wincoditie = 0
+let winaar = 0 
 
 
 function changePlayer() {
@@ -68,6 +68,17 @@ function mouseClicked() {
     vak9 = speler;
     changePlayer();
   }
+  //logica van de winaar bepaalen 
+  function checkWinner() {
+
+if (winaar == "speler1") {
+  console.log("Speler 1 heeft gewonnen!");
+}
+
+if (winaar == "speler2") {
+  console.log("Speler 2 heeft gewonnen!");
+}
+  } 
 }
 
 function setup() {
