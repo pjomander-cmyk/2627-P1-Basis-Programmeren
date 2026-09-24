@@ -13,8 +13,13 @@ let winconditie = 0
 let vak1X = 140;
 let vak1Y = 130;
 let vakSize = 100;
+let reset = 0;
 
 
+function keyPressed (){ 
+  if(keyCode === 13 ) 
+  reset = 1; 
+} 
 
 function changePlayer() {
   if (speler == "speler1") {
@@ -72,8 +77,22 @@ function mouseClicked() {
     vak9 = speler;
     changePlayer();
   } 
+  //winconditsies
+  {
+    
+
+
+} 
+}  
   
-}
+
+
+
+
+
+
+  
+
 
 
 
@@ -129,6 +148,7 @@ function draw() {
   if (vak1 == "speler1") { //speler === "speler1" && 
     fill("blue")
     rect(140, 130, 100) 
+    
   }
   if (vak1 == "speler2") { //speler === "speler2" && 
     fill("red")
@@ -198,8 +218,93 @@ function draw() {
   }
   if (vak9 == "speler2") {
     fill("red")
-    rect(360, 340, 100)
-  }
+    rect(360, 340, 100) 
+  } 
+} 
+  // 
+  if( winconditie  === 3 ){ 
+                                             nm. çø¿fill("blue")
+  text("speler2wint",140,50,50)
+ 
+  } 
+
+  if( winconditie  === 1 ){ 
+  fill("blue") 
+  text("speler1wint",140,50,50)
 
 }  
+  
 
+// conmditsie speler 2
+
+    if(vak1 && vak2 && vak3 ===  "speler2" ){
+  winconditie = 3
+ 
+} 
+if(vak4 && vak5 && vak6 === "speler2" ){
+  winconditie = 3
+
+}  
+if(vak7 && vak8 && vak9 === "speler2" ){
+  winconditie = 3 
+  
+}   
+
+if(vak1 && vak4 && vak7 === "speler2" ){
+  winconditie = 3
+ 
+}  
+if(vak2 && vak5 && vak8 === "speler2" ){
+  winconditie = 3
+  
+}  
+if(vak3 && vak6 && vak9 === "speler2" ){
+  winconditie = 3
+
+}  
+if(vak3 && vak5 && vak7 === "speler2" ){
+  winconditie = 3
+  
+}  
+if(vak1 && vak5 && vak9 === "speler2" ){
+  winconditie = 3
+}  
+
+
+  
+
+
+ //winconditsies
+  {
+    if(vak1 && vak2 && vak3 ===  "speler1" ){
+  winconditie = 1  
+
+} 
+if(vak4 && vak5 && vak6 === "speler1" ){
+  winconditie = 1 
+
+}  
+if(vak7 && vak8 && vak9 === "speler1" ){
+  winconditie = 1  
+
+}   
+if(vak1 && vak4 && vak7 === "speler1" ){
+  winconditie = 1 
+ 
+}  
+if(vak2 && vak5 && vak8 === "speler1" ){
+  winconditie = 1 
+
+}  
+if(vak3 && vak6 && vak9 === "speler1" ){
+  winconditie = 1 
+
+}  
+if(vak3 && vak5 && vak7 === "speler1" ){
+  winconditie = 1 
+
+}  
+if(vak1 && vak5 && vak9 === "speler1" ){
+  winconditie = 1 
+}  
+  } 
