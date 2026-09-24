@@ -12,8 +12,8 @@ let speler = "speler1"
 let winconditie = 0
 let vak1X = 140;
 let vak1Y = 130;
-
 let vakSize = 100;
+
 
 
 function changePlayer() {
@@ -71,74 +71,9 @@ function mouseClicked() {
   if (mouseX > 360 && mouseX < 460 && mouseY > 340 && mouseY < 435) {
     vak9 = speler;
     changePlayer();
-  }
-
+  } 
+  
 }
-//wincoditsies speler 1
-if (vak1 && vak2 && vak3 == "speler1") {
-  winconditie = 1
-}
-if (vak4 && vak5 && vak6 == "speler1") {
-  winconditie = 1
-}
-if (vak7 && vak8 && vak9 == "speler1") {
-  winconditie = 1
-}
-if (vak1 && vak4 && vak7 == "speler1") {
-  winconditie = 1
-}
-if (vak2 && vak5 && vak8 == "speler1") {
-  winconditie = 1
-}
-if (vak3 && vak6 && vak9 == "speler1") {
-  winconditie = 1
-}
-if (vak3 && vak5 && vak7 == "speler1") {
-  winconditie = 1
-}
-
-if (vak1 && vak5 && vak9 == "speler1") {
-  winconditie = 1
-}
-if (winconditie == 1) {
-  fill("blue")
-  text("speler1 wint", 170, 50, 50)
-  console.log("gamee")
-}
-
-// wincodintie speler 2 
-if (vak1 && vak2 && vak3 == "speler2") {
-  winconditie  = 2
-}
-if (vak4 && vak5 && vak6 == "speler2") {
-  winconditie = 2
-}
-if (vak7 && vak8 && vak9 == "speler2") {
-  winconditie = 2
-}
-if (vak1 && vak4 && vak7 == "speler2") {
-  winconditie = 2
-}
-if (vak2 && vak5 && vak8 == "speler2") {
-  winconditie = 2
-}
-if (vak3 && vak6 && vak9 == "speler2") {
-  winconditie = 2
-}
-if (vak3 && vak5 && vak7 == "speler2") {
-  winconditie = 2
-}
-if (vak1 && vak5 && vak9 == "speler2") {
-  winconditie = 2
-}
-if (winconditie == 2) {
-  fill("red")
-  text("speler2 wint", 170, 50, 50)
-  console.log("gameends ")
-}
-
-
-
 
 
 
@@ -173,7 +108,7 @@ function draw() {
   //test 
   // fill("red")
   // text("test",10,100,100)
-  fill
+
 
 
 
@@ -193,7 +128,7 @@ function draw() {
   // logica van wie er aan de beurt is 
   if (vak1 == "speler1") { //speler === "speler1" && 
     fill("blue")
-    rect(140, 130, 100)
+    rect(140, 130, 100) 
   }
   if (vak1 == "speler2") { //speler === "speler2" && 
     fill("red")
@@ -265,5 +200,6 @@ function draw() {
     fill("red")
     rect(360, 340, 100)
   }
-}
+
+}  
 
