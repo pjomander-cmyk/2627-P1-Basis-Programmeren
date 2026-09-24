@@ -9,7 +9,7 @@ let vak8 = 0;
 let vak9 = 0;
 let counter = 0
 let speler = "speler1"
-
+let winconditie = 0 
 let vak1X = 140;
 let vak1Y = 130;
 
@@ -69,6 +69,32 @@ function mouseClicked() {
     if(mouseX > 360 && mouseX < 460 && mouseY >340 && mouseY < 435) {
       vak9 = speler;
       changePlayer();
+    }  
+
+
+    if ( vak1 && vak2 && vak3 == player1 ) { 
+      winconditie = 1  
+    } 
+     if ( vak4 && vak5 && vak6 == player1 ) { 
+      winconditie = 1  
+    } 
+      if ( vak7 && vak8 && vak9 == player1 ) { 
+      winconditie = 1  
+    } 
+      if ( vak1 && vak4 && vak7 == player1 ) {  
+      winconditie = 1  
+    } 
+      if ( vak2 && vak5 && vak8 == player1 ) {  
+      winconditie = 1  
+    } 
+ if ( vak3 && vak6 && vak9 == player1 ) {  
+      winconditie = 1  
+    } 
+    if ( vak3 && vak5 && vak7 == player1 ) {  
+      winconditie = 1  
+    } 
+     if ( vak1 && vak5 && vak9 == player1 ) {  
+      winconditie = 1  
     } 
   } 
 
@@ -193,3 +219,5 @@ function mouseClicked() {
         rect(360, 340, 100)
       }   
     } 
+
+    
