@@ -19,7 +19,8 @@ let reset  = 0
 function keyPressed (){
   if(keyCode == 13 ) reset = 1 
   if(reset == 1)
-     (vak1 && vak2 && vak3 && vak4 && vak5 && vak6 && vak7 && vak8 && vak9 == speeler0 )
+     (vak1 && vak2 && vak3 && vak4 && vak5 && vak6 && vak7 && vak8 && vak9 ==  "speler0" ) 
+    console.log("reset works")
 } 
   
     
@@ -76,44 +77,77 @@ function mouseClicked() {
   if (mouseX > 360 && mouseX < 460 && mouseY > 340 && mouseY < 435) {
     vak9 = speler;
     changePlayer();
-  }
+  } 
+}
   //logica van de winaar bepaalen 
-  function checkWinner() { 
-
+ function winaarcheck (){ 
   // Speler 1
-  if (
-    (vak1 == "speler1" && vak2 == "speler1" && vak3 == "speler1") 
-    (vak4 == "speler1" && vak5 == "speler1" && vak6 == "speler1") 
-    (vak7 == "speler1" && vak8 == "speler1" && vak9 == "speler1") 
-    (vak1 == "speler1" && vak4 == "speler1" && vak7 == "speler1") 
-    (vak2 == "speler1" && vak5 == "speler1" && vak8 == "speler1") 
-    (vak3 == "speler1" && vak6 == "speler1" && vak9 == "speler1") 
-    (vak1 == "speler1" && vak5 == "speler1" && vak9 == "speler1") 
-    (vak3 == "speler1" && vak5 == "speler1" && vak7 == "speler1")
-  ) {
-    winaar = 1 ;
+
+   if (vak1 == "speler1" && vak2 == "speler1" && vak3 == "speler1"){ 
+    winaar = 1;
+   }
+   if (vak4 == "speler1" && vak5 == "speler1" && vak6 == "speler1"){ 
+    winaar = 1; 
+ } 
+  if  (vak7 == "speler1" && vak8 == "speler1" && vak9 == "speler1") {
+    winaar =1;
   }
+   if (vak1 == "speler1" && vak4 == "speler1" && vak7 == "speler1"){
+    winaar =1; 
+   }
+  if   (vak2 == "speler1" && vak5 == "speler1" && vak8 == "speler1") {
+    winaar = 1;
+  } 
+   if (vak3 == "speler1" && vak6 == "speler1" && vak9 == "speler1"){
+    winaar = 1;
+   } 
+   if (vak1 == "speler1" && vak5 == "speler1" && vak9 == "speler1"){ 
+    winaar = 1 ;
+   } 
+  if  (vak3 == "speler1" && vak5 == "speler1" && vak7 == "speler1") { 
+    winaar = 1 ;
+  } 
+  
+  }  
+  if(winaar == "1"){
+console.log("speler1wint") } 
 
   // Speler 2
-  if (
-    (vak1 == "speler2" && vak2 == "speler2" && vak3 == "speler2") 
-    (vak4 == "speler2" && vak5 == "speler2" && vak6 == "speler2") 
-    (vak7 == "speler2" && vak8 == "speler2" && vak9 == "speler2") 
-    (vak1 == "speler2" && vak4 == "speler2" && vak7 == "speler2") 
-    (vak2 == "speler2" && vak5 == "speler2" && vak8 == "speler2") 
-    (vak3 == "speler2" && vak6 == "speler2" && vak9 == "speler2") 
-    (vak1 == "speler2" && vak5 == "speler2" && vak9 == "speler2") 
-    (vak3 == "speler2" && vak5 == "speler2" && vak7 == "speler2")
-  ) {
-    winaar = 2;
+  
+
+
+  if  (vak1 == "speler2" && vak2 == "speler2" && vak3 == "speler2"){ 
+    winaar =2; 
   }
-}
+   if (vak4 == "speler2" && vak5 == "speler2" && vak6 == "speler2"){
+    winaar =2;
+   } 
 
+   if (vak7 == "speler2" && vak8 == "speler2" && vak9 == "speler2"){
+    winaar =2; 
+   } 
 
+   if (vak1 == "speler2" && vak4 == "speler2" && vak7 == "speler2"){ 
+    winaar =2 
+   } 
 
+   if (vak2 == "speler2" && vak5 == "speler2" && vak8 == "speler2") { 
+      winaar =2 
+    } 
+   if (vak3 == "speler2" && vak6 == "speler2" && vak9 == "speler2"){
+    winaar = 2; 
+   } 
+   if (vak1 == "speler2" && vak5 == "speler2" && vak9 == "speler2") { 
+    winaar = 2;
+   } 
+   if (vak3 == "speler2" && vak5 == "speler2" && vak7 == "speler2") {
+  winaar = 2;  
 
-
-}
+  if(winaar == "2"){
+  console.log("speler2wint") 
+} 
+   } 
+  
 
 
 function setup() {
@@ -142,16 +176,14 @@ function draw() {
   square(360, 340, 100)
   // einde van de statishe elementen van het bord
 
-//winaar tonen 
+// winaar tonen
 if(winaar == "1"){
-  fill("blue") 
+ fill("blue") 
 text("speler1wint",150,50,50) 
-console.log("speler1wint") 
 } 
 if(winaar == "2"){ 
-  fill("red") 
+ fill("red") 
   text("speler2wint",150,50,50) 
-  console.log("speler2wint") 
 } 
 
 
@@ -245,4 +277,5 @@ if(winaar == "2"){
         fill("red")
         rect(360, 340, 100)
       }   
-    } 
+
+    }  
