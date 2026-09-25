@@ -12,18 +12,18 @@ let speler = "speler1"
 let vak1X = 140;
 let vak1Y = 130;
 let vakSize = 100;
-let winaar = 0 
-let reset  = 0 
+let winaar = 0
+let reset = 0
 
 
-function keyPressed (){
-  if(keyCode == 13 ) reset = 1 
-  if(reset == 1)
-     (vak1 && vak2 && vak3 && vak4 && vak5 && vak6 && vak7 && vak8 && vak9 ==  "speler0" ) 
-    console.log("reset works")
-} 
-  
-    
+function keyPressed() {
+  if (keyCode == 13) reset = 1
+  if (reset == 1)
+    (vak1 && vak2 && vak3 && vak4 && vak5 && vak6 && vak7 && vak8 && vak9 == "speler0")
+  console.log("reset works")
+}
+
+
 
 function changePlayer() {
   if (speler == "speler1") {
@@ -77,77 +77,81 @@ function mouseClicked() {
   if (mouseX > 360 && mouseX < 460 && mouseY > 340 && mouseY < 435) {
     vak9 = speler;
     changePlayer();
-  } 
+  }
+
+  winaarcheck();
 }
-  //logica van de winaar bepaalen 
- function winaarcheck (){ 
+
+//logica van de winaar bepaalen 
+function winaarcheck() {
   // Speler 1
 
-   if (vak1 == "speler1" && vak2 == "speler1" && vak3 == "speler1"){ 
+  if (vak1 == "speler1" && vak2 == "speler1" && vak3 == "speler1") {
     winaar = 1;
-   }
-   if (vak4 == "speler1" && vak5 == "speler1" && vak6 == "speler1"){ 
-    winaar = 1; 
- } 
-  if  (vak7 == "speler1" && vak8 == "speler1" && vak9 == "speler1") {
-    winaar =1;
   }
-   if (vak1 == "speler1" && vak4 == "speler1" && vak7 == "speler1"){
-    winaar =1; 
-   }
-  if   (vak2 == "speler1" && vak5 == "speler1" && vak8 == "speler1") {
+  if (vak4 == "speler1" && vak5 == "speler1" && vak6 == "speler1") {
     winaar = 1;
-  } 
-   if (vak3 == "speler1" && vak6 == "speler1" && vak9 == "speler1"){
-    winaar = 1;
-   } 
-   if (vak1 == "speler1" && vak5 == "speler1" && vak9 == "speler1"){ 
-    winaar = 1 ;
-   } 
-  if  (vak3 == "speler1" && vak5 == "speler1" && vak7 == "speler1") { 
-    winaar = 1 ;
-  } 
-  
-  }  
-  if(winaar == "1"){
-console.log("speler1wint") } 
-
-  // Speler 2
-  
-
-
-  if  (vak1 == "speler2" && vak2 == "speler2" && vak3 == "speler2"){ 
-    winaar =2; 
   }
-   if (vak4 == "speler2" && vak5 == "speler2" && vak6 == "speler2"){
-    winaar =2;
-   } 
+  if (vak7 == "speler1" && vak8 == "speler1" && vak9 == "speler1") {
+    winaar = 1;
+  }
+  if (vak1 == "speler1" && vak4 == "speler1" && vak7 == "speler1") {
+    winaar = 1;
+  }
+  if (vak2 == "speler1" && vak5 == "speler1" && vak8 == "speler1") {
+    winaar = 1;
+  }
+  if (vak3 == "speler1" && vak6 == "speler1" && vak9 == "speler1") {
+    winaar = 1;
+  }
+  if (vak1 == "speler1" && vak5 == "speler1" && vak9 == "speler1") {
+    winaar = 1;
+  }
+  if (vak3 == "speler1" && vak5 == "speler1" && vak7 == "speler1") {
+    winaar = 1;
+  }
 
-   if (vak7 == "speler2" && vak8 == "speler2" && vak9 == "speler2"){
-    winaar =2; 
-   } 
+}
+if (winaar == "1") {
+  console.log("speler1wint")
+}
 
-   if (vak1 == "speler2" && vak4 == "speler2" && vak7 == "speler2"){ 
-    winaar =2 
-   } 
+// Speler 2
 
-   if (vak2 == "speler2" && vak5 == "speler2" && vak8 == "speler2") { 
-      winaar =2 
-    } 
-   if (vak3 == "speler2" && vak6 == "speler2" && vak9 == "speler2"){
-    winaar = 2; 
-   } 
-   if (vak1 == "speler2" && vak5 == "speler2" && vak9 == "speler2") { 
-    winaar = 2;
-   } 
-   if (vak3 == "speler2" && vak5 == "speler2" && vak7 == "speler2") {
-  winaar = 2;  
 
-  if(winaar == "2"){
-  console.log("speler2wint") 
-} 
-   } 
-  
+
+if (vak1 == "speler2" && vak2 == "speler2" && vak3 == "speler2") {
+  winaar = 2;
+}
+if (vak4 == "speler2" && vak5 == "speler2" && vak6 == "speler2") {
+  winaar = 2;
+}
+
+if (vak7 == "speler2" && vak8 == "speler2" && vak9 == "speler2") {
+  winaar = 2;
+}
+
+if (vak1 == "speler2" && vak4 == "speler2" && vak7 == "speler2") {
+  winaar = 2
+}
+
+if (vak2 == "speler2" && vak5 == "speler2" && vak8 == "speler2") {
+  winaar = 2
+}
+if (vak3 == "speler2" && vak6 == "speler2" && vak9 == "speler2") {
+  winaar = 2;
+}
+if (vak1 == "speler2" && vak5 == "speler2" && vak9 == "speler2") {
+  winaar = 2;
+}
+if (vak3 == "speler2" && vak5 == "speler2" && vak7 == "speler2") {
+  winaar = 2;
+
+  if (winaar == "2") {
+    console.log("speler2wint")
+  }
+}
+
 
 
 function setup() {
@@ -176,15 +180,17 @@ function draw() {
   square(360, 340, 100)
   // einde van de statishe elementen van het bord
 
-// winaar tonen
-if(winaar == "1"){
- fill("blue") 
-text("speler1wint",150,50,50) 
-} 
-if(winaar == "2"){ 
- fill("red") 
-  text("speler2wint",150,50,50) 
-} 
+  // winaar tonen
+  if (winaar == "1") {
+    fill("blue")
+    text("speler1wint", 150, 50, 50)
+    fill("black") 
+    text("gameover druk op enter om te reseten",500,50,50)
+  }
+  if (winaar == "2") {
+    fill("red")
+    text("speler2wint", 150, 50, 50)
+  }
 
 
 
@@ -203,79 +209,114 @@ if(winaar == "2"){
 
 
   // inkleuren 
- if (vak1 == "speler1") { //speler === "speler1" && 
-        fill("blue")
-        rect(140, 130, 100)
-      }
-      if (vak1 == "speler2") { //speler === "speler2" && 
-        fill("red")
-        rect(140, 130, 100)
-      }
+  if (vak1 == "speler1") { //speler === "speler1" && 
+    fill("blue")
+    rect(140, 130, 100)
+  }
+  if (vak1 == "speler2") { //speler === "speler2" && 
+    fill("red")
+    rect(140, 130, 100)
+  } 
+  if (vak2 == "speler1") {
+    fill("blue")
+    rect(140, 235, 100)
+  }
+  if (vak2 == "speler2") {
+    fill("red")
+    rect(140, 235, 100)
+  }
+  if (vak3 == "speler1") {
+    fill("blue")
+    rect(140, 340, 100)
+  }
+  if (vak3 == "speler2") {
+    fill("red")
+    rect(140, 340, 100)
+  }
+  if (vak4 == "speler1") {
+    fill("blue")
+    rect(250, 130, 100)
+  }
+  if (vak4 == "speler2") {
+    fill("red")
+    rect(250, 130, 100)
+  }
 
-      if (vak2 == "speler1") {
-        fill("blue")
-        rect(140, 235, 100)
-      }
-      if (vak2 == "speler2") {
-        fill("red")
-        rect(140, 235, 100)
-      }
-      if (vak3 == "speler1") {
-        fill("blue")
-        rect(140, 340, 100)
-      }
-      if (vak3 == "speler2") {
-        fill("red")
-        rect(140, 340, 100)
-      }
-      if (vak4 == "speler1") {
-        fill("blue")
-        rect(250, 130, 100)
-      }
-      if (vak4 == "speler2") {
-        fill("red")
-        rect(250, 130, 100)
-      }
+  if (vak5 == "speler1") {
+    fill("blue")
+    rect(250, 235, 100)
+  }
+  if (vak5 == "speler2") {
+    fill("red")
+    rect(250, 235, 100)
+  }
+  if (vak6 == "speler1") {
+    fill("blue")
+    rect(250, 340, 100)
+  }
+  if (vak6 == "speler2") {
+    fill("red")
+    rect(250, 340, 100)
+  }
+  if (vak7 == "speler1") {
+    fill("blue")
+    rect(360, 130, 100)
+  }
+  if (vak7 == "speler2") {
+    fill("red")
+    rect(360, 130, 100)
+  }
+  if (vak8 == "speler1") {
+    fill("blue")
+    rect(360, 235, 100)
+  }
+  if (vak8 == "speler2") {
+    fill("red")
+    rect(360, 235, 100)
+  }
+  if (vak9 == "speler1") {
+    fill("blue")
+    rect(360, 340, 100)
+  }
+  if (vak9 == "speler2") {
+    fill("red")
+    rect(360, 340, 100)
+  }
+if (vak1 == "speler0"){
+  fill("white") 
+rect(140,130,100)
+} 
+if (vak2 == "speler0"){
+  fill("white") 
+rect(140,235,100)
+} 
+if (vak3 == "speler0"){
+  fill("white") 
+rect(140,340,100)
+}  
+if(vak4 == "speler0"){
+  fill("white")
+  rect(250,130,100)
+} 
+if(vak5 == "speler0"){
+  fill("white")
+  rect(250,235,100)
+} 
+if(vak6 == "speler0"){
+  fill("white")
+  rect(250,340,100)
+} 
+if(vak7 == "speler0"){ 
+  fill("white") 
+  rect(360,130,100) 
+}
+if(vak8 == "speler0"){ 
+  fill("white") 
+  rect(360,235,100)  
+} 
+if(vak7 == "speler0"){ 
+  fill("white") 
+  rect(360,340,100) 
+}
 
-      if (vak5 == "speler1") {
-        fill("blue")
-        rect(250, 235, 100)
-      }
-      if (vak5 == "speler2") {
-        fill("red")
-        rect(250, 235, 100)
-      }
-      if (vak6 == "speler1") {
-        fill("blue")
-        rect(250, 340, 100)
-      }
-      if (vak6 == "speler2") {
-        fill("red")
-        rect(250, 340, 100)
-      }   
-       if (vak7 == "speler1") {
-        fill("blue")
-        rect(360, 130, 100)
-      }
-      if (vak7 == "speler2") {
-        fill("red")
-        rect(360, 130, 100)
-      }   
-      if (vak8 == "speler1") {
-        fill("blue")
-        rect(360, 235, 100)
-      }
-      if (vak8 == "speler2") {
-        fill("red")
-        rect(360, 235, 100)
-      }   
-      if (vak9 == "speler1") {
-        fill("blue")
-        rect(360, 340, 100)
-      }
-      if (vak9 == "speler2") {
-        fill("red")
-        rect(360, 340, 100)
-      }   
-
-    }  
+}  
