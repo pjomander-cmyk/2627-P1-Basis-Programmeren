@@ -111,7 +111,7 @@ function winaarcheck() {
     winaar = 1;
   }
 
-}
+
 if (winaar == "1") {
   console.log("speler1wint")
 }
@@ -150,6 +150,7 @@ if (vak3 == "speler2" && vak5 == "speler2" && vak7 == "speler2") {
   if (winaar == "2") {
     console.log("speler2wint")
   }
+} 
 }
 
 
@@ -211,76 +212,94 @@ function draw() {
   // inkleuren 
   if (vak1 == "speler1") { //speler === "speler1" && 
     fill("blue")
-    rect(140, 130, 100)
+    rect(140, 130, 100) 
+    vak1 = 1;
   }
   if (vak1 == "speler2") { //speler === "speler2" && 
     fill("red")
-    rect(140, 130, 100)
+    rect(140, 130, 100) 
+    vak1 =1 ;
   } 
   if (vak2 == "speler1") {
     fill("blue")
     rect(140, 235, 100)
+    vak2 =1
   }
   if (vak2 == "speler2") {
     fill("red")
     rect(140, 235, 100)
+    vak2 =1
   }
   if (vak3 == "speler1") {
     fill("blue")
-    rect(140, 340, 100)
+    rect(140, 340, 100) 
+    vak3 =1;
   }
   if (vak3 == "speler2") {
     fill("red")
-    rect(140, 340, 100)
+    rect(140, 340, 100) 
+    vak3 = 1;
   }
   if (vak4 == "speler1") {
     fill("blue")
-    rect(250, 130, 100)
+    rect(250, 130, 100) 
+    vak4 = 1; 
   }
   if (vak4 == "speler2") {
     fill("red")
-    rect(250, 130, 100)
+    rect(250, 130, 100) 
+    vak4 = 1 ;
   }
 
   if (vak5 == "speler1") {
     fill("blue")
-    rect(250, 235, 100)
+    rect(250, 235, 100) 
+    vak5 = 1;
   }
   if (vak5 == "speler2") {
     fill("red")
     rect(250, 235, 100)
+    vak5= 1;
   }
   if (vak6 == "speler1") {
     fill("blue")
-    rect(250, 340, 100)
+    rect(250, 340, 100) 
+    vak6 =1 
   }
   if (vak6 == "speler2") {
     fill("red")
     rect(250, 340, 100)
+    vak6 =1
   }
   if (vak7 == "speler1") {
     fill("blue")
-    rect(360, 130, 100)
+    rect(360, 130, 100) 
+    vak7 = 1
   }
   if (vak7 == "speler2") {
     fill("red")
-    rect(360, 130, 100)
+    rect(360, 130, 100) 
+    vak7 = 1;
   }
   if (vak8 == "speler1") {
     fill("blue")
     rect(360, 235, 100)
+    vak = 1;
   }
   if (vak8 == "speler2") {
     fill("red")
     rect(360, 235, 100)
+    vak8 = 1;
   }
   if (vak9 == "speler1") {
     fill("blue")
     rect(360, 340, 100)
+    vak9 = 1;
   }
   if (vak9 == "speler2") {
     fill("red")
-    rect(360, 340, 100)
+    rect(360, 340, 100) 
+    vak9 = 1 
   }
 if (vak1 == "speler0"){
   fill("white") 
