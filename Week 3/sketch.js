@@ -17,21 +17,35 @@ let reset = 0
 let draw1 = 0
 let wit2 = 0
 
-function keyPressed() {
-  if (keyCode == 13) reset = 1
-  if (reset == 1) vak1 = "wit2"
-  if (reset == 1) vak2 = "wit2"
-  if (reset == 1) vak3 = "wit2"
-  if (reset == 1) vak4 = "wit2"
-  if (reset == 1) vak5 = "wit2"
-  if (reset == 1) vak6 = "wit2"
-  if (reset == 1) vak7 = "wit2"
-  if (reset == 1) vak8 = "wit2"
-  if (reset == 1) vak9 = "wit2"
 
+function resetGame() {
+  vak1 = 0
+  vak2 = 0
+  vak3 = 0
+  vak4 = 0
+  vak5 = 0
+  vak6 = 0
+  vak7 = 0
+  vak8 = 0
+  vak9 = 0
 
-  console.log("reset works")
+  winaar = 0
+  speler = "speler1"
+  draw1 = 0
 }
+
+function keyPressed() {
+  if (keyCode == 13) {
+    resetGame();
+    console.log("reset works")
+  }
+
+
+
+
+}
+
+
 
 
 
@@ -90,8 +104,14 @@ function mouseClicked() {
   }
 
   winaarcheck();
+  drawcheck();
 
 
+}
+
+if (speler == "speler2") {
+  if (reset == 1)
+    speler = "speler1"
 }
 
 //logica van de winaar bepaalen 
@@ -124,7 +144,7 @@ function winaarcheck() {
   }
 
 
-  if (winaar == "1") {
+  if (winaar == 1) {
     console.log("speler1wint")
   }
 
@@ -159,17 +179,23 @@ function winaarcheck() {
   if (vak3 == "speler2" && vak5 == "speler2" && vak7 == "speler2") {
     winaar = 2;
 
-    if (winaar == "2") {
+    if (winaar == 2) {
       console.log("speler2wint")
     }
   }
-  function drawcheck() {
-    if (vak1 == "1" && vak2 == "1" && vak3 == "1" && vak4 == "1" && vak5 == "1" && vak6 == "1" && vak7 == "1" && vak8 == "1" && vak9 == "1") draw1 = 1;
-    if (draw1 == 1)
-      console.log("drawwerkt")
-  }
+  
 }
 
+function drawcheck() {
+
+  if (vak1 != 0 && vak2 != 0 && vak3 != 0 && vak4 != 0 && vak5 != 0 && vak6 != 0 && vak7 != 0 && vak8 != 0 && vak9 != 0) {
+    if (winaar == 0)
+      draw1 = 1
+  }
+
+  if (draw1 == 1)
+    console.log("drawwerkt")
+}
 
 
 
@@ -199,31 +225,7 @@ function draw() {
   square(360, 340, 100)
   // einde van de statishe elementen van het bord
 
-  // winaar tonen
-  if (winaar == "1") {
-    fill("blue")
-    text("speler1wint", 150, 50, 50)
-    fill("black")
-    text("gameover druk op enter om te reseten", 500, 50, 50)
-  }
-  if (winaar == "2") {
-    fill("red")
-    text("speler2wint", 150, 50, 50)
-     fill("black")
-    text("gameover druk op enter om te reseten", 500,50,50)
-  }
-
-
-  // aangeven wie de speler is 
-  if (speler == "speler1") {
-    fill("blue")
-    text("speler1 is aan de beurt", 100, 50, 50)
-  }
-  if (speler == "speler2") {
-    fill("red")
-    text("speler2 is aan de beurt", 100, 50, 50)
-  }
-
+  
 
 
   //cordinaten van de vakjes 
@@ -332,40 +334,70 @@ function draw() {
   }
 
 
-  if (vak1 == "wit2") {
+  if (vak1 == 0) {
     fill("white")
     rect(140, 130, 100)
   }
-  if (vak2 == "wit2") {
+  if (vak2 == 0) {
     fill("white")
     rect(140, 235, 100)
   }
-  if (vak3 == "wit2") {
+  if (vak3 == 0) {
     fill("white")
     rect(140, 340, 100)
   }
-  if (vak4 == "wit2") {
+  if (vak4 == 0) {
     fill("white")
     rect(250, 130, 100)
   }
-  if (vak5 == "wit2") {
+  if (vak5 == 0) {
     fill("white")
     rect(250, 235, 100)
   }
-  if (vak6 == "wit2") {
+  if (vak6 == 0) {
     fill("white")
     rect(250, 340, 100)
   }
-  if (vak7 == "wit2") {
+  if (vak7 == 0) {
     fill("white")
     rect(360, 130, 100)
   }
-  if (vak8 == "wit2") {
+  if (vak8 == 0) {
     fill("white")
     rect(360, 235, 100)
   }
-  if (vak7 == "wit2") {
+  if (vak9 == 0) {
     fill("white")
     rect(360, 340, 100)
   }
+
+// winaar tonen
+  if (winaar == 1) {
+    fill("blue")
+    text("speler1wint", 150, 50, 50)
+  }
+  if (winaar == 2) {
+    fill("red")
+    text("speler2wint", 150, 50, 50)
+  }
+  if (draw1 == 1 && winaar == 0) {
+    fill("orange")
+    text("gelijkspel", 150, 50, 50)
+  }
+  if (winaar > 0 || draw1 == 1) {
+    fill("black")
+    text("gameover druk op enter om te reseten", 500, 50, 50)
+  }
+
+  if (speler == "speler1") {
+    fill("blue")
+    text("speler1 is aan de beurt", 100, 50, 50)
+  }
+
+  if (speler == "speler2") {
+    fill("red")
+    text("speler2 is aan de beurt", 100, 50, 50)
+  }
+
+
 } 
