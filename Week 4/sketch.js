@@ -1,5 +1,5 @@
 //  de variabelen 
-
+let kleuren 
 
 
 
@@ -8,7 +8,9 @@
 
 // de functies 
 function keyPressed (){ 
-  if(keyCode === 8 ) 
+  if(keyCode === 8 ){ 
+    console.log("backspace works") 
+  } 
   } 
 
 
