@@ -4,7 +4,8 @@ kleurenarray = random(8)
 let positiearrayx = [50,100,150,200,250,300,350,400,450,500,550,600]
 positiearrayx = random(600)  
 let positiearrayy = [50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800] 
-positiearrayy = random(800)
+positiearrayy = random(800) 
+
 
 
 // de functies 
