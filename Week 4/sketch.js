@@ -1,4 +1,3 @@
-
 // de arrays
 let ArrayX = [];
 let ArrayY = [];
@@ -14,24 +13,22 @@ let assignColor = "";
 
 // de functies
 function keyPressed(){
-
-   if (keyCode === 8) {
+    if (keyCode === 8) {
   ArrayX = [];
   ArrayY = [];
   ArrayG = [];
   ArrayS= [];
-  for (let i = 0; i < 100; i = i + 1) {
-    ArrayX.push(random(0,800));
+  for (let i = 0; i < 100; i = i + 1) { 
+     ArrayX.push(random(0,800));
     ArrayY.push(random(0,600));
     ArrayG.push(random(20,70));
     ArrayS.push(random(1,5)); 
-    
+   assignColor = kleurarray[int((random(0,kleurarray.length)))];
+   console.log("backspace works")  
 } 
-}
-
-
-
-function setup() {
+    } 
+  } 
+  function setup() {
   createCanvas(800, 600);
 
   if (keyCode === 8) {
@@ -40,23 +37,7 @@ for (let i = 0; i < 100; i = i + 1)
     ArrayY.push(random(0,500));
     ArrayG.push(random(20,70));
     ArrayS.push(random(1,5));
-    
-  } 
-  }
-  
-
-function draw() {
-  background(220);
-
-
-  if(keyCode === 8){
-  assignColor = kleurarray[int((random(0,kleurarray.length)))];
-   console.log("backspace works") 
-  fill(assignColor);
-  for(i=0;i< ArrayX.length;i++)
-
-
-  {
+    {
     ArrayY[i]=ArrayY[i]-ArrayS[i]
 
     circle(ArrayX[i],ArrayY[i],ArrayG[i]);
@@ -66,5 +47,26 @@ function draw() {
     }
   } 
   }
+
 }
+
+  
+function draw() {
+  background(220);
+
+
+  if(keyCode === 8){
+  
+  fill(assignColor);
+  for(i=0;i< ArrayX.length;i++) 
+    {
+    ArrayY[i]=ArrayY[i]-ArrayS[i]
+
+    circle(ArrayX[i],ArrayY[i],ArrayG[i]);
+    if (ArrayY[i]<0)
+    {
+      ArrayY[i] = 500;
+    }
+  } 
+  }
 } 
