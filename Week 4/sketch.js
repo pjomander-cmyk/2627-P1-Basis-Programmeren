@@ -46,7 +46,7 @@ console.log(positieY)
 
 
 function draw() {
-  background(220)
+  background(0,128,128) 
 
   //logica van de elementen die bewegen nu nog statish later bewegend  
 
