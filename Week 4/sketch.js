@@ -6,7 +6,7 @@ let positiearrayx = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600]
 let positiearrayy = [50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800]
 //positiearrayy = random(800)
 let assignColor = "";
-
+let  positiex  = "";
 // de functies 
 function keyPressed() {
   if (keyCode === 8) {
@@ -14,16 +14,21 @@ function keyPressed() {
     console.log("backspace works") 
     console.log(int((random(0,kleurenarray.length))));
     return; 
-  }
+  } 
+  if(keyCode === 8 ){
+    positiex   = positiearrayx [int((random(0,positiearrayx.length)))];
+   // console.log ([int((random(50,positiearrayx.length))) ])
 } 
   function kleurselectie() {
   }
-
+} 
   function setup() {
     createCanvas(800, 600);
    assignColor = kleurenarray[int((random(0,kleurenarray.length)))];
-   console.log(assignColor);
-  } 
+   console.log(assignColor); 
+    positiex   = positiearrayx [int((random(50,positiearrayx.length)))];
+    console.log (positiex  ); 
+   } 
 
 
 
