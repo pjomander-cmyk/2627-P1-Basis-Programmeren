@@ -87,6 +87,17 @@ function draw() {
       ArrayY1[i] = 500;
     }
   } 
+
+  fill(assignColor2);
+  for(i=0;i< ArrayX2.length;i++) 
+    {
+    ArrayY2[i]=ArrayY2[i]-ArrayS2[i]
+
+    circle(ArrayX2[i],ArrayY2[i],ArrayG2[i]);
+    if (ArrayY2[i]<0)
+    {
+      ArrayY2[i] = 500;
   }
 } 
-
+  } 
+} 
