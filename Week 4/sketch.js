@@ -37,8 +37,8 @@ ArrayX2 = [];
   for (let i = 0; i < 100; i = i + 1) { 
      ArrayX2.push(random(0,800));
     ArrayY2.push(random(0,600));
-    ArrayG2.push(random(20,70));
-    ArrayS2.push(random(1,5)); 
+    ArrayG2.push(random(50,0));
+    ArrayS2.push(random(1,10)); 
    assignColor2 = kleurarray2[int((random(0,kleurarray2.length)))];
    console.log("backspace works2")  
     } 
