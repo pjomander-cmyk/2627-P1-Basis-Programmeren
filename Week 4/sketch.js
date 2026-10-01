@@ -3,11 +3,11 @@ let ArrayX = [];
 let ArrayY = [];
 let ArrayG = [];
 let ArrayS = []; 
-let kleurarray = ["red","blue","green","yellow","black","purple","orange", "0,255,255","O,128,128"] 
+let kleurarray1 = ["red","blue","green","yellow","black","purple","orange", "0,255,255","O,128,128"] 
 
 
 // variabelen 
-let assignColor = ""; 
+let assignColor1 = ""; 
 
 
 
@@ -23,7 +23,7 @@ function keyPressed(){
     ArrayY.push(random(0,600));
     ArrayG.push(random(20,70));
     ArrayS.push(random(1,5)); 
-   assignColor = kleurarray[int((random(0,kleurarray.length)))];
+   assignColor1 = kleurarray1[int((random(0,kleurarray1.length)))];
    console.log("backspace works")  
 } 
     } 
@@ -57,7 +57,7 @@ function draw() {
 
   if(keyCode === 8){
   
-  fill(assignColor);
+  fill(assignColor1);
   for(i=0;i< ArrayX.length;i++) 
     {
     ArrayY[i]=ArrayY[i]-ArrayS[i]
