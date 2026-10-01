@@ -52,8 +52,8 @@ ArrayX2 = [];
 
   if (keyCode === 8) {
 for (let i = 0; i < 100; i = i + 1) 
-    ArrayX1.push(random(0,500));
-    ArrayY1.push(random(0,500));
+    ArrayX1.push(random(0,800));
+    ArrayY1.push(random(0,600));
     ArrayG1.push(random(20,70));
     ArrayS1.push(random(1,5));
     {
@@ -62,7 +62,7 @@ for (let i = 0; i < 100; i = i + 1)
     circle(ArrayX1[i],ArrayY1[i],ArrayG1[i]);
     if (ArrayY1[i]<0)
     {
-      ArrayY1[i] = 500;
+      ArrayY1[i] = 900;
     }
   } 
   }
@@ -84,7 +84,7 @@ function draw() {
     circle(ArrayX1[i],ArrayY1[i],ArrayG1[i]);
     if (ArrayY1[i]<0)
     {
-      ArrayY1[i] = 500;
+      ArrayY1[i] = 900;
     }
   } 
 
@@ -93,10 +93,10 @@ function draw() {
     {
     ArrayY2[i]=ArrayY2[i]-ArrayS2[i]
 
-    circle(ArrayX2[i],ArrayY2[i],ArrayG2[i]);
+    square(ArrayX2[i],ArrayY2[i],ArrayG2[i]);
     if (ArrayY2[i]<0)
     {
-      ArrayY2[i] = 500;
+      ArrayY2[i] = 900;
   }
 } 
   } 
