@@ -91,12 +91,12 @@ function draw() {
   fill(assignColor2);
   for(i=0;i< ArrayX2.length;i++) 
     {
-    ArrayY2[i]=ArrayY2[i]-ArrayS2[i]
+    ArrayX2[i]=ArrayX2[i]-ArrayS2[i]
 
     square(ArrayX2[i],ArrayY2[i],ArrayG2[i]);
-    if (ArrayY2[i]<0)
+    if (ArrayX2[i]<0)
     {
-      ArrayY2[i] = 900;
+      ArrayX2[i] = 900;
   }
 } 
   } 
