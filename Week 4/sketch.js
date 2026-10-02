@@ -15,7 +15,7 @@ let assignColor1 = "";
 let assignColor2 = "";
 let  timer = 0 ;
 
-// de functies  hier word doormidel van een ingedrukte toets de waardes voor de draw functie uitgevoerd 
+// de functies  hier word doormidel van een ingedrukte toets de waardes voor de draw functie gekozen 
 function keyPressed(){
     if (keyCode === 8) {
   ArrayX1 = [];
@@ -58,7 +58,7 @@ function draw() {
 
 
 
-  // timer functie voor de kleur functioneerd nog niet 
+  // timer functie voor de kleur 
   timer = timer + 1 
   console.log(timer)
   if(timer > 50) {
