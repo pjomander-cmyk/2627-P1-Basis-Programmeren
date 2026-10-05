@@ -6,8 +6,11 @@ const  vragenArray = ["naam van deze tank","kaliber van het kanon","bij welke kl
 //                           1                       2                           3                                4                                      5                              6                              7                                        8                                                           9                                                                10 
 let nubijvraaG = -1; 
 
-function preLoad(){
-img = loadImage("mijnAfbeelding.png");
+
+let img;
+
+function preload() {
+  img = loadImage('assets/quize.png');
 }
 
 function setup() {
@@ -15,5 +18,8 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(220); 
+
+  
+    image("img", 10, 10, 100, 100);
 }
