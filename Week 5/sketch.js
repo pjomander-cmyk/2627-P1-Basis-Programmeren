@@ -1,25 +1,36 @@
-let vraagActief = 0;
-let startSchermactief = 0
-let  spelersScore = 0 
-let eindSchermactief = 0; 
-const  vragenArray = ["naam van deze tank","kaliber van het kanon","bij welke klassen hoort dit voertuig","uit welke periode komt deze tank","uit welk land komt deze tank","hoe snel kan deze ifv rijden","hoe heet dit geanuleerde voertuig", "waneer ging deze ifv voor het eerst in productie","wat is de naam voor de meestgebruikete antitank munitie van tanks","hoe heet de antiinfanterie munitie die meestal door tanks word gebruikt "] 
-//                           1                       2                           3                                4                                      5                              6                              7                                        8                                                           9                                                                10 
-let nubijvraaG = -1; 
-
-
 let img;
+let startSchermactief = 1
+let vragenArray = ["dit is vraag 0"] 
+vragenArray.push["naam van deze tank"]
+vragenArray.push["kaliber van dit kanon "] 
+vragenArray.push ["bij welke klassen hoort dit voertuig "]
+vragenArray.push["uit welk land komt deze tank"]
+vragenArray.push["hoe snel kan deze ifv rijden"] 
+vragenArray.push ["hoe heet dit geanuleerde voertuig"]
+vragenArray.push["waneer ging deze ifv voor het eerst in productie"]
+vragenArray.push["wat is de naam voor de meestgebruikete antitank munitie van tanks"] 
+vragenArray.push ["uit welke periode komt deze tank"]
+vragenArray.push ["hoe heet de antiinfanterie munitie diehet meest door tanks word gebruikt"]
+
+console.log(vragenArray)
+
 
 function preload() {
-  img = loadImage('assets/quize.png');
+  img = loadImage("./assets/quize.jpg");
 }
+
 
 function setup() {
   createCanvas(800, 600);
 }
 
 function draw() {
-  background(220); 
 
+  background(220);
   
-    image("img", 10, 10, 100, 100);
-}
+    if (startSchermactief == 1) {
+      image(img,1, 1, 800, 600);
+   
+
+    } 
+  } 
