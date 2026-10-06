@@ -1,4 +1,7 @@
-let img;
+let truecounter = 0
+let falsecounter = 0
+let img; 
+let startschermKnop;
 let startSchermactief = 1
 let vragenArray = ["dit is vraag 0"] 
 vragenArray.push["naam van deze tank"]
@@ -21,7 +24,11 @@ function preload() {
 
 
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(800, 600); 
+startschermKnop = createButton('start met de vragen ') 
+startschermKnop.positon(300,300) 
+startschermKnop.style('font-size','16px') 
+
 }
 
 function draw() {
@@ -30,7 +37,9 @@ function draw() {
   
     if (startSchermactief == 1) {
       image(img,1, 1, 800, 600);
-   
-
+   startSchermactief = 0 
+   if(startSchermactief == 0) 
+     image(img.hide ) 
+console.log(startSchermactief) 
     } 
   } 
