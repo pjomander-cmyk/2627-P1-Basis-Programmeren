@@ -2,6 +2,7 @@ let truecounter = 0
 let falsecounter = 0
 let img;  
 let volgendevraag ;
+let position = 0;
 let vorigevraag ; 
 let vraagactief = 0; 
 let startSchermactief = 1
@@ -43,12 +44,12 @@ function preload() {
 function setup() {
   createCanvas(800, 600); 
 volgendevraag = createButton('start met de vragen ') 
-volgendevraag.position(300,300)
+//createButton.position(300,300)
 volgendevraag.style('font-size','16px')  
 volgendevraag.mousePressed(functievolgendevraag)
 // 
   vorigevraag = createButton('toon de vorige vraag');
-  vorigevraag.position(200, 300);
+ //createButton.position(300, 200);
   vorigevraag.style('font-size', '16px')
   vorigevraag.mousePressed(functievorigevraag) 
 
