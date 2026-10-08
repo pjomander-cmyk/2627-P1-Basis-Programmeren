@@ -25,6 +25,11 @@ vraagactief = vraagactief = 1;
 
 vorigevraag.show();
 
+ } 
+ function functievorigevraag(){
+  vraagactief = vraagactief - 1 ; 
+
+  volgendevraag.show();
  }
 
 function preload() {
@@ -53,7 +58,13 @@ function draw() {
   }
     if (vraagactief==vragenArray.length-1)
   {
-    volgende_vraag.hide();
+    volgendevraag.hide();
   }
   text(vragenArray[vraagactief],20,20);
+
+
+if(vraagactief == 0 ){
+      image(img,1, 1, 800, 600);  
+}
+
   } 
