@@ -1,7 +1,9 @@
 let truecounter = 0
 let falsecounter = 0
 let img; 
-let startschermKnop;
+let volgendevraag ;
+let vorigevraag ; 
+let vraagactief = 0; 
 let startSchermactief = 1
 let vragenArray = ["dit is vraag 0"] 
 vragenArray.push["naam van deze tank"]
@@ -18,6 +20,13 @@ vragenArray.push ["hoe heet de antiinfanterie munitie diehet meest door tanks wo
 console.log(vragenArray)
 
 
+ function  functievolgendevraag(){
+vraagactief = vraagactief = 1;
+
+vorigevraag.show();
+
+ }
+
 function preload() {
   img = loadImage("./assets/quize.jpg");
 }
@@ -25,21 +34,26 @@ function preload() {
 
 function setup() {
   createCanvas(800, 600); 
-startschermKnop = createButton('start met de vragen ') 
-startschermKnop.positon(300,300) 
-startschermKnop.style('font-size','16px') 
+volgendevraag = createButton('start met de vragen ') 
+volgendevraag.positon(200,300) 
+volgendevraag.style('font-size','16px')  
+// 
+  vorigevraag = createButton('toon de vorige vraag');
+  vorigevraag.position(10, 300);
+  vorigevraag.mousePressed(functie_vorige_vraag);
 
 }
 
 function draw() {
-
   background(220);
-  
-    if (startSchermactief == 1) {
-      image(img,1, 1, 800, 600);
-   startSchermactief = 0 
-   if(startSchermactief == 0) 
-     image(img.hide ) 
-console.log(startSchermactief) 
-    } 
+  //controleerd welke knoppen actief zijn
+    if (vraagactief == 0 )
+  {
+    vorigevraag.hide();
+  }
+    if (vraagactief==vragenArray.length-1)
+  {
+    volgende_vraag.hide();
+  }
+  text(vragenArray[vraagactief],20,20);
   } 
