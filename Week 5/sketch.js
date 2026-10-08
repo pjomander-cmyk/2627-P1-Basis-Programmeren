@@ -1,11 +1,11 @@
 let truecounter = 0
 let falsecounter = 0
-let img; 
+let img;  
 let volgendevraag ;
 let vorigevraag ; 
 let vraagactief = 0; 
 let startSchermactief = 1
-let vragenArray = ["dit is vraag 0"] 
+let vragenArray = ["dit is het startscherm"] 
 vragenArray.push["naam van deze tank"]
 vragenArray.push["kaliber van dit kanon "] 
 vragenArray.push ["bij welke klassen hoort dit voertuig "]
@@ -15,9 +15,12 @@ vragenArray.push ["hoe heet dit geanuleerde voertuig"]
 vragenArray.push["waneer ging deze ifv voor het eerst in productie"]
 vragenArray.push["wat is de naam voor de meestgebruikete antitank munitie van tanks"] 
 vragenArray.push ["uit welke periode komt deze tank"]
-vragenArray.push ["hoe heet de antiinfanterie munitie diehet meest door tanks word gebruikt"]
+vragenArray.push ["hoe heet de antiinfanterie munitie diehet meest door tanks word gebruikt"] 
+vragenArray.push["dit is het eindscherm"]
 
 console.log(vragenArray)
+
+  
 
 
  function  functievolgendevraag(){
@@ -40,12 +43,14 @@ function preload() {
 function setup() {
   createCanvas(800, 600); 
 volgendevraag = createButton('start met de vragen ') 
-volgendevraag.positon(200,300) 
+volgendevraag.position(300,300)
 volgendevraag.style('font-size','16px')  
+volgendevraag.mousePressed(functievolgendevraag)
 // 
   vorigevraag = createButton('toon de vorige vraag');
-  vorigevraag.position(10, 300);
-  vorigevraag.mousePressed(functie_vorige_vraag);
+  vorigevraag.position(200, 300);
+  vorigevraag.style('font-size', '16px')
+  vorigevraag.mousePressed(functievorigevraag) 
 
 }
 
@@ -64,7 +69,9 @@ function draw() {
 
 
 if(vraagactief == 0 ){
-      image(img,1, 1, 800, 600);  
+      image(img,50, 50, 500, 300);  
 }
+if(vraagactief > 0)  
+  img.hide()
 
-  } 
+ } 
