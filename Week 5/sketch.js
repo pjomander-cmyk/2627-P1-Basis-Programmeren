@@ -146,7 +146,7 @@ function controleerAntwoord(gekozenAntwoord) {
 function preload() {
 
   img = loadImage("./assets/quize.jpg");
-
+  img = loadImage("./assets/m1a1 achtergrond.png ");
 }
 
 
