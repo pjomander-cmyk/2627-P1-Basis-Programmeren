@@ -174,7 +174,7 @@ function setup() {
 
 
   vorigevraag = createButton("vorige vraag");
-  vorigevraag.position(150, 400);
+  vorigevraag.position(5, 570);
   vorigevraag.style("font-size", "16px");
   vorigevraag.mousePressed(functievorigevraag);
 
@@ -303,35 +303,35 @@ function draw() {
 
 
   if (vraagactief == 1) {
-    image(imgvraag1, 10, 10, 100, 100)
+    image(imgvraag1, 50, 50, 500, 300)
   }
   if (vraagactief == 2) {
-    image(imgvraag2, 10, 10, 100, 100)
+    image(imgvraag2, 50, 50, 500, 300)
   }
 
   if (vraagactief == 3) {
-    image(imgvraag3, 10, 10, 100, 100)
+    image(imgvraag3, 50, 50, 500, 300)
   }
   if (vraagactief == 4) {
-    image(imgvraag4, 10, 10, 100, 100)
+    image(imgvraag4, 50, 50, 500, 300)
   }
   if (vraagactief == 5) {
-    image(imgvraag5, 10, 10, 100, 100)
+    image(imgvraag5, 50, 50, 500, 300)
   }
   if (vraagactief == 6) {
-    image(imgvraag6, 10, 10, 100, 100)
+    image(imgvraag6, 50, 50, 500, 300)
   }
   if (vraagactief == 7) {
-    image(imgvraag7, 10, 10, 100, 100)
+    image(imgvraag7, 50, 50, 500, 300)
   }
   if (vraagactief == 8) {
-    image(imgvraag8, 10, 10, 100, 100)
+    image(imgvraag8, 50, 50, 500, 300)
   }
   if (vraagactief == 9) {
-    image(imgvraag9, 10, 10, 100, 100)
+    image(imgvraag9, 50, 50, 500, 300)
   }
   if (vraagactief == 10) {
-    image(imgvraag10, 10, 10, 100, 100)
+    image(imgvraag10, 50, 50, 500, 300)
   }
 
 }
