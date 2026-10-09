@@ -10,7 +10,7 @@ let startSchermactief = 1;
 let antwoord1;
 let antwoord2;
 let antwoord3;
-let antwoord4; 
+let antwoord4;
 let imgvraag1;
 let imgvraag2;
 let imgvraag3;
@@ -22,7 +22,7 @@ let imgvraag8
 let imgvraag9
 let imgvraag10
 
-let vragenArray = ["dit is het startscherm"]; 
+let vragenArray = ["dit is het startscherm"];
 
 vragenArray.push("naam van deze tank");
 vragenArray.push("kaliber van dit kanon");
@@ -44,10 +44,10 @@ vragenArray.push("dit is het eindscherm");
 
 let antwoorden = [
 
-  
+
   [],
 
-  
+
   ["M1 Abrams", "Leopard 2", "T-72", "Challenger 2"],
 
 
@@ -71,19 +71,19 @@ let antwoorden = [
 
   ["APFSDS", "HE", "AP", "HEAT"],
 
-  
+
   ["Eerste Wereldoorlog", "Tweede Wereldoorlog", "Koude Oorlog", "Moderne tijd"],
 
 
   ["HE", "APFSDS", "AP", "HEAT"],
 
- 
+
   []
 ];
 
 
 
-let juisteAntwoorden = [0,0,0,1,1,2,2,0,2,0,2,0,0 ]
+let juisteAntwoorden = [0,0,2,1,3,2,0,2,0,0,0] 
 
 
 
@@ -146,16 +146,16 @@ function controleerAntwoord(gekozenAntwoord) {
 function preload() {
 
   img = loadImage("./assets/quize.jpg");
-  imgvraag1 = loadImage("./assets/m1a1 achtergrond.png ");
-  imgvraag2 = loadImage ("./assets/ 125.jpg " ) ;
-  imgvraag3 = loadImage ("./assets/ german puma.webp ") ;
-  imgvraag4 = loadImage  ("./assets/  lecrece.JPG " ) ;
-  imgvraag5 = loadImage  ("./assets/  german puma.webp ") ;
-  imgvraag6 = loadImage  ("./assets/ m10,jpg ") 
-  imgvraag7 = loadImage ("./assets/  M2_Bradley_Reforger_1985.jpg ");
-  imgvraag8 =  loadImage  ("./assets/ apfsds.jpg ");
-  imgvraag9 = loadImage  ("./assets/ Little_Willie.jpg " ) 
-  imgvraag10 = loadImage  ("./assets/ 125-mm-HE.png ")  
+  imgvraag1 = loadImage("./assets/m1a1 achtergrond.png");
+  imgvraag2 = loadImage("./assets/125.jpg");
+  imgvraag3 = loadImage("./assets/german puma.webp");
+  imgvraag4 = loadImage("./assets/lecrece.JPG");
+  imgvraag5 = loadImage("./assets/german puma.webp");
+  imgvraag6 = loadImage("./assets/m10.jpg");
+  imgvraag7 = loadImage("./assets/M2_Bradley_Reforger_1985.jpg");
+  imgvraag8 = loadImage("./assets/apfsds.jpg");
+  imgvraag9 = loadImage("./assets/mark1.webp");
+  imgvraag10 = loadImage("./assets/125-mm-HE.png");
 
 }
 
@@ -183,7 +183,7 @@ function setup() {
   antwoord1 = createButton("");
   antwoord1.position(100, 250);
   antwoord1.style("font-size", "16px");
-  antwoord1.mousePressed(function() {
+  antwoord1.mousePressed(function () {
     controleerAntwoord(0);
   });
 
@@ -193,17 +193,17 @@ function setup() {
   antwoord2 = createButton("");
   antwoord2.position(350, 250);
   antwoord2.style("font-size", "16px");
-  antwoord2.mousePressed(function() {
+  antwoord2.mousePressed(function () {
     controleerAntwoord(1);
   });
 
 
- 
+
 
   antwoord3 = createButton("");
   antwoord3.position(100, 320);
   antwoord3.style("font-size", "16px");
-  antwoord3.mousePressed(function() {
+  antwoord3.mousePressed(function () {
     controleerAntwoord(2);
   });
 
@@ -213,12 +213,12 @@ function setup() {
   antwoord4 = createButton("");
   antwoord4.position(350, 320);
   antwoord4.style("font-size", "16px");
-  antwoord4.mousePressed(function() {
+  antwoord4.mousePressed(function () {
     controleerAntwoord(3);
   });
 
 
-  
+
 
   antwoord1.hide();
   antwoord2.hide();
@@ -256,7 +256,7 @@ function draw() {
   }
 
 
- 
+
 
   if (vraagactief > 0 && vraagactief < vragenArray.length - 1) {
 
@@ -269,7 +269,7 @@ function draw() {
     antwoord4.show();
 
 
-   
+
 
     antwoord1.html(antwoorden[vraagactief][0]);
     antwoord2.html(antwoorden[vraagactief][1]);
@@ -302,36 +302,36 @@ function draw() {
 
 
 
-  if(vraagactief == 1){
-    image(imgvraag1,10,10,100,100) 
-  } 
-   if(vraagactief == 2){
-    image(imgvraag2,10,10,100,100) 
-  }  
+  if (vraagactief == 1) {
+    image(imgvraag1, 10, 10, 100, 100)
+  }
+  if (vraagactief == 2) {
+    image(imgvraag2, 10, 10, 100, 100)
+  }
 
- if(vraagactief == 3){
-    image(imgvraag3,10,10,100,100) 
-  } 
-   if(vraagactief == 4){
-    image(imgvraag4,10,10,100,100) 
-  } 
-   if(vraagactief == 5){
-    image(imgvraag5,10,10,100,100) 
-  } 
-   if(vraagactief == 6){
-    image(imgvraag6,10,10,100,100) 
-  } 
-   if(vraagactief == 7){
-    image(imgvraag7,10,10,100,100) 
-  } 
-   if(vraagactief == 8){
-    image(imgvraag8,10,10,100,100) 
-  }  
-   if(vraagactief == 9){
-    image(imgvraag9,10,10,100,100) 
-  } 
-   if(vraagactief == 10){
-    image(imgvraag10,10,10,100,100) 
-  } 
-  
+  if (vraagactief == 3) {
+    image(imgvraag3, 10, 10, 100, 100)
+  }
+  if (vraagactief == 4) {
+    image(imgvraag4, 10, 10, 100, 100)
+  }
+  if (vraagactief == 5) {
+    image(imgvraag5, 10, 10, 100, 100)
+  }
+  if (vraagactief == 6) {
+    image(imgvraag6, 10, 10, 100, 100)
+  }
+  if (vraagactief == 7) {
+    image(imgvraag7, 10, 10, 100, 100)
+  }
+  if (vraagactief == 8) {
+    image(imgvraag8, 10, 10, 100, 100)
+  }
+  if (vraagactief == 9) {
+    image(imgvraag9, 10, 10, 100, 100)
+  }
+  if (vraagactief == 10) {
+    image(imgvraag10, 10, 10, 100, 100)
+  }
+
 }
