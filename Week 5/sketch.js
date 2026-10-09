@@ -63,7 +63,7 @@ let antwoorden = [
   ["40 km/u", "50 km/u", "70 km/u", "90 km/u"],
 
 
-  ["XM8", "M8", "M551", "M60"],
+  ["m10 booker", "M8", "M551", "M60"],
 
 
   ["1960", "1970", "1980", "1990"],
@@ -146,7 +146,17 @@ function controleerAntwoord(gekozenAntwoord) {
 function preload() {
 
   img = loadImage("./assets/quize.jpg");
-  img = loadImage("./assets/m1a1 achtergrond.png ");
+  imgvraag1 = loadImage("./assets/m1a1 achtergrond.png ");
+  imgvraag2 = loadImage ("./assets/ 125.jpg " ) ;
+  imgvraag3 = loadImage ("./assets/ german puma.webp ") ;
+  imgvraag4 = loadImage  ("./assets/  lecrece.JPG " ) ;
+  imgvraag5 = loadImage  ("./assets/  german puma.webp ") ;
+  imgvraag6 = loadImage  ("./assets/ m10,jpg ") 
+  imgvraag7 = loadImage ("./assets/  M2_Bradley_Reforger_1985.jpg ");
+  imgvraag8 =  loadImage  ("./assets/ apfsds.jpg ");
+  imgvraag9 = loadImage  ("./assets/ Little_Willie.jpg " ) 
+  imgvraag10 = loadImage  ("./assets/ 125-mm-HE.png ")  
+
 }
 
 
@@ -290,4 +300,38 @@ function draw() {
 
   }
 
+
+
+  if(vraagactief == 1){
+    image(imgvraag1,10,10,100,100) 
+  } 
+   if(vraagactief == 2){
+    image(imgvraag2,10,10,100,100) 
+  }  
+
+ if(vraagactief == 3){
+    image(imgvraag3,10,10,100,100) 
+  } 
+   if(vraagactief == 4){
+    image(imgvraag4,10,10,100,100) 
+  } 
+   if(vraagactief == 5){
+    image(imgvraag5,10,10,100,100) 
+  } 
+   if(vraagactief == 6){
+    image(imgvraag6,10,10,100,100) 
+  } 
+   if(vraagactief == 7){
+    image(imgvraag7,10,10,100,100) 
+  } 
+   if(vraagactief == 8){
+    image(imgvraag8,10,10,100,100) 
+  }  
+   if(vraagactief == 9){
+    image(imgvraag9,10,10,100,100) 
+  } 
+   if(vraagactief == 10){
+    image(imgvraag10,10,10,100,100) 
+  } 
+  
 }
