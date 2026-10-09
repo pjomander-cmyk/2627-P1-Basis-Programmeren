@@ -1,21 +1,28 @@
 
 let truecounter = 0;
 let falsecounter = 0;
-
 let img;
 let volgendevraag;
 let vorigevraag;
-
 let position = 0;
 let vraagactief = 0;
 let startSchermactief = 1;
-
 let antwoord1;
 let antwoord2;
 let antwoord3;
-let antwoord4;
+let antwoord4; 
+let imgvraag1;
+let imgvraag2;
+let imgvraag3;
+let imgvraag4;
+let imgvraag5
+let imgvraag6
+let imgvraag7
+let imgvraag8
+let imgvraag9
+let imgvraag10
 
-let vragenArray = ["dit is het startscherm"];
+let vragenArray = ["dit is het startscherm"]; 
 
 vragenArray.push("naam van deze tank");
 vragenArray.push("kaliber van dit kanon");
@@ -30,47 +37,53 @@ vragenArray.push("hoe heet de anti-infanterie munitie die het meest door tanks w
 vragenArray.push("dit is het eindscherm");
 
 
-// De 4 antwoorden per vraag
+
+
+
+
+
 let antwoorden = [
 
- 
-[]
-
-  ["M1 Abrams", "Leopard 2", "T-72", "Challenger 2"],
+  
+  [],
 
   
+  ["M1 Abrams", "Leopard 2", "T-72", "Challenger 2"],
+
+
   ["105 mm", "120 mm", "125 mm", "90 mm"],
 
 
   ["MBT", "IFV", "SPAA", "SPG"],
 
-  
+
   ["Nederland", "Duitsland", "Verenigde Staten", "Frankrijk"],
 
 
   ["40 km/u", "50 km/u", "70 km/u", "90 km/u"],
 
- 
+
   ["XM8", "M8", "M551", "M60"],
 
 
   ["1960", "1970", "1980", "1990"],
 
- 
+
   ["APFSDS", "HE", "AP", "HEAT"],
 
-
+  
   ["Eerste Wereldoorlog", "Tweede Wereldoorlog", "Koude Oorlog", "Moderne tijd"],
+
 
   ["HE", "APFSDS", "AP", "HEAT"],
 
-
+ 
   []
 ];
 
 
 
-let juisteAntwoorden = [0,0,1,1,2,2,0,2,0,2,0,0 ]
+let juisteAntwoorden = [0,0,0,1,1,2,2,0,2,0,2,0,0 ]
 
 
 
