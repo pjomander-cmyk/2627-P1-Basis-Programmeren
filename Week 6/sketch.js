@@ -45,16 +45,18 @@ function setup() {
 }
 
 function draw() {
-  background(220); 
+  background("green"); 
  
 
-  // de balken die gezondheid etc tonen 
+  // de balken die gezondheid etc tonen en de waarders ervoor bijhouden
   fill("gray")
-  rect(1,1,200,200) 
+  rect(1,1,100,100) 
 
+// acties die gebeuren als de gezondheid 0 is 
 
   if(gezondheid == 0 ) {
     fill("black")
-    text ("huisdierdood je hebt gefaalt ",100,30) 
+    text ("huisdierdood je hebt gefaalt",200,100) 
+    image(imggameoverscreen,50,50,50,50) 
   } 
 }
