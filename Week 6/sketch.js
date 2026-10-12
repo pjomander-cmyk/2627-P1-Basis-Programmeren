@@ -3,7 +3,7 @@ let geluk  = 100
 let energie = 100
 let gezondheid = 100
 let imggameoverscreen;
-
+let counterh = 0
 
 
 // console.log
@@ -72,10 +72,13 @@ function draw() {
     text("druk op backspace om te reseten",300,200)
     //image(imggameoverscreen,50,50,50,50) 
   }  
-  // hier word het honger nivea bijgehouden  doormiddel van de framecount
- if (frameCount === 120) { 
+  // hier word het honger nivea bijgehouden  doormiddel van een counter 
+counterh = counterh + 1 
+if(counterh === 120 ) { 
+  if(counterh === 125)
+    counterh = 0
   honger = honger -1 ; 
-  console.log(frameCount) 
+  console.log(counterh)  
   console.log(honger)
  } 
   
