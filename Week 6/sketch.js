@@ -1,8 +1,8 @@
 let honger = 100
 let geluk  = 100
 let energie = 100
-let  gezondheid = 0 
-let  imggameoverscreen;
+let gezondheid = 100
+let imggameoverscreen;
 
 
 
@@ -32,6 +32,18 @@ function gezondheideffecten (){
 function spelen (){
 
 
+} 
+
+function keyPressedreset (){
+  if (keyCode === 8 && gezondheid == 0) {
+    backSpacePressed = true;
+    gezondheid = 100
+    energie = 100
+    geluk = 100 
+    honger = 100  
+    console.log(backSpacePressed)
+  } 
+
 }
 function etengeven () {
 
@@ -57,6 +69,14 @@ function draw() {
   if(gezondheid == 0 ) {
     fill("black")
     text ("huisdierdood je hebt gefaalt",200,100) 
-    image(imggameoverscreen,50,50,50,50) 
-  } 
+    text("druk op backspace om te reseten",300,200)
+    //image(imggameoverscreen,50,50,50,50) 
+  }  
+  // hier word het honger nivea bijgehouden  doormiddel van de framecount
+ if (frameCount === 120) { 
+  honger = honger -1 ; 
+  console.log(frameCount) 
+  console.log(honger)
+ } 
+  
 }
