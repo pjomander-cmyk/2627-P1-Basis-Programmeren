@@ -181,7 +181,7 @@ function setup() {
 
 
   antwoord1 = createButton("");
-  antwoord1.position(100, 250);
+  antwoord1.position(100, 500);
   antwoord1.style("font-size", "16px");
   antwoord1.mousePressed(function () {
     controleerAntwoord(0);
@@ -191,7 +191,7 @@ function setup() {
 
 
   antwoord2 = createButton("");
-  antwoord2.position(350, 250);
+  antwoord2.position(350, 450);
   antwoord2.style("font-size", "16px");
   antwoord2.mousePressed(function () {
     controleerAntwoord(1);
@@ -201,7 +201,7 @@ function setup() {
 
 
   antwoord3 = createButton("");
-  antwoord3.position(100, 320);
+  antwoord3.position(100, 450);
   antwoord3.style("font-size", "16px");
   antwoord3.mousePressed(function () {
     controleerAntwoord(2);
@@ -211,7 +211,7 @@ function setup() {
 
 
   antwoord4 = createButton("");
-  antwoord4.position(350, 320);
+  antwoord4.position(350, 500);
   antwoord4.style("font-size", "16px");
   antwoord4.mousePressed(function () {
     controleerAntwoord(3);
