@@ -2,7 +2,7 @@ let honger = 100
 let geluk  = 100
 let energie = 100
 let  gezondheid = 0 
-
+let  imggameoverscreen;
 
 
 
@@ -19,11 +19,15 @@ storeItem (energie,100)
 storeItem (gezondheid,100) 
 } 
 
+
+function preLoad (){
+imggameoverscreen = Loadimage("./asset/OIP.webp") 
+}
 function gezondheideffecten (){ 
   if(gezondheid == 0 )  
     fill("black")
-    text ("huisdierdood je hebt gefaalt ",100,30) 
-  
+    text ("huisdier dood je hebt gefaalt ",500,100) 
+    image(imggameoverscreen,50,50,50,50 )
   }
 function spelen (){
 
