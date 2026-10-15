@@ -91,6 +91,10 @@ text(honger,70,30)
   if (counterE === 300) {
     energie = energie - 1;
   } 
+
+  if(counterE > 300){
+    counterE = 0
+  } 
   if(energie <0 ){
     energie = 0 
   }
@@ -99,7 +103,21 @@ text(counterE , 120,100)
 fill("green") 
 text(energie,70,40)
 
+// hier word het geluksnivea bijgehouden door middel van een counter 
+counterG = counterG + 1
+if(counterG === 600) {
+  geluk = geluk -1 
+} 
+if(geluk <0 ){
+  geluk = 0 
+}
+if(counterG > 600){
+  counterG = 0 
+} 
 
-
+fill("black") 
+text(counterE , 140,100)
+fill("blue") 
+text(energie,70,50)
 
 } 
