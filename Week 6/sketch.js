@@ -60,7 +60,15 @@ function draw() {
   rect(1, 1, 100, 100)
 fill("red")
 text(gezondheid,70,60)
- 
+fill("orange")
+text("honger",30,30) 
+fill("green") 
+text("energie",30,40)
+fill("blue")
+text("geluk",30,50)
+fill("red")
+text("gezondheid",30,60)
+
   // acties die gebeuren als de gezondheid 0 is 
 
   if (gezondheid == 0) {
@@ -78,8 +86,7 @@ if (counterh >= 200) {
  if (honger < 0) {
    honger = 0;
  }
-fill("black")
-text( counterh,100,100)
+
 fill("orange")
 text(honger,70,30)
  
@@ -92,8 +99,16 @@ if(honger < 50) {
   gezondheid = gezondheid - 1
 } 
 if(gezondheid < 0) {
-  gezondheid = 0
+  gezondheid = 0  
+  if(geluk <50 && energie < 50 )
+    gezondheid = 60 
 } 
+if(geluk <10 && energie < 10 ){
+  gezondheid = 0 
+}
+if(geluk < 50){
+  gezondheid = 75
+}
 
 
 
@@ -110,8 +125,6 @@ if(gezondheid < 0) {
   if(energie <0 ){
     energie = 0 
   }
-fill("black") 
-text(counterE , 120,100)
 fill("green") 
 text(energie,70,40)
 
@@ -126,10 +139,7 @@ if(geluk <0 ){
 if(counterG > 600){
   counterG = 0 
 } 
-
-fill("black") 
-text(counterE , 140,100)
 fill("blue") 
-text(energie,70,50)
+text(geluk,70,50)
 
 } 
