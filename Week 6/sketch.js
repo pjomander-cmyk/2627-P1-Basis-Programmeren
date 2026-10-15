@@ -54,13 +54,13 @@ function setup() {
 }
 
 function draw() {
-  background("green");
+  background("green"); 
 
-
-  // de balken die gezondheid etc tonen en de waarders ervoor bijhouden
   fill("gray")
   rect(1, 1, 100, 100)
-
+fill("red")
+text(gezondheid,70,60)
+ 
   // acties die gebeuren als de gezondheid 0 is 
 
   if (gezondheid == 0) {
@@ -80,9 +80,21 @@ if (counterh >= 200) {
  }
 fill("black")
 text( counterh,100,100)
-fill("red")
+fill("orange")
 text(honger,70,30)
  
+
+// hier wordt de gezondheid bijgehouden
+if(honger > 100){
+  gezondheid = 95 
+}
+if(honger < 50) {
+  gezondheid = gezondheid - 1
+} 
+if(gezondheid < 0) {
+  gezondheid = 0
+} 
+
 
 
 
