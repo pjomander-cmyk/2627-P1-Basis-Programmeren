@@ -4,21 +4,16 @@ let energie = 100
 let gezondheid = 100
 let imggameoverscreen;
 let counterh = 0
-let counterE 
+let counterE
 
-// console.log
-console.log(honger)
-console.log(geluk)
-console.log(energie)
-console.log(gezondheid)
+
 // functies 
 function savescore() {
   storeItem(honger, honger)
-  storeItem(geluk, geluk) 
+  storeItem(geluk, geluk)
   storeItem(energie, energie)
-  storeItem(gezondheid, gezondheid) 
+  storeItem(gezondheid, gezondheid)
 }
-
 
 function preLoad() {
   imggameoverscreen = Loadimage("./asset/OIP.webp")
@@ -35,14 +30,14 @@ function spelen() {
 }
 
 function keyPressedreset() {
-  if (keyCode === 8 && gezondheid == 0) 
+  if (keyCode === 8 && gezondheid == 0)
     backSpacePressed = true;
-    gezondheid = 100
-    energie = 100
-    geluk = 100
-    honger = 100
-    console.log(backSpacePressed)
-  }
+  gezondheid = 100
+  energie = 100
+  geluk = 100
+  honger = 100
+  console.log(backSpacePressed)
+}
 
 
 function etengeven() {
@@ -54,6 +49,7 @@ function slapen() {
 }
 function setup() {
   createCanvas(800, 800);
+
 }
 
 function draw() {
@@ -72,30 +68,33 @@ function draw() {
     text("druk op backspace om te reseten", 300, 200)
     //image(imggameoverscreen,50,50,50,50) 
   }
-  // hier word het honger nivea bijgehouden  doormiddel van een counter 
-   counterh = counterh + 1
-  if (counterh === 200) {
-     honger = honger  - 1;  
-  } 
-    if(counterh === 220){ 
-      counterh = 0 
-    } 
-    {if(honger< 0) 
-      honger = 0 
-    }  
-    
-      console.log("counterh"+ counterh)
+  // hier word het honger nivea bijgehouden  doormiddel van een counter  
+
+
+
+counterh = counterh + 1;
+if (counterh >= 200) {
+ counterh = 0; 
+ honger = honger - 1;
+}
+  
+  if (honger < 0) {
+    honger = 0;
+  }
+console.log("counterh"+ counterh)
     console.log("honger" + honger) 
-    
-    // hier word het energienivea bijgehouden door middel van een counter
-    counterE = counterE + 1 
-    if(counterE === 300){
-      energie = energie - 2;
-    } 
 
-    }
-  
+ 
+}
 
-  
+  // hier word het energienivea bijgehouden door middel van een counter
+  counterE = counterE + 1
+  if (counterE === 300) {
+    energie = energie - 2;
+  }
+
+
+
+
 
 
