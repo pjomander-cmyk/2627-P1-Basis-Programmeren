@@ -4,7 +4,7 @@ let energie = 100
 let gezondheid = 100
 let imggameoverscreen;
 let counterh = 0
-
+let counterE 
 
 // console.log
 console.log(honger)
@@ -74,16 +74,20 @@ function draw() {
   }
   // hier word het honger nivea bijgehouden  doormiddel van een counter 
    counterh = counterh + 1
-  if (counterh === 500) {
+  if (counterh === 200) {
      honger = honger  - 1;  
-    if(counterh === 550)  
+  } 
+    if(counterh === 200){ 
       counterh = 0 
-    honger = honger  - 1; 
-    if(honger < 0) honger = 0 
+    } 
+    {if(honger< 0) 
+      honger = 0 
+    }  
     
+      console.log(counterh)
+    console.log("honger" + honger)
+  
 } 
-    console.log(counterh)
-    console.log(honger)
   
 
-}
+
