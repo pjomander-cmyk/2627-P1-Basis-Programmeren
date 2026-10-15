@@ -13,10 +13,10 @@ console.log(energie)
 console.log(gezondheid)
 // functies 
 function savescore() {
-  storeItem(honger, 100)
-  storeItem(geluk, 100)
-  storeItem(energie, 100)
-  storeItem(gezondheid, 100)
+  storeItem(honger, honger)
+  storeItem(geluk, geluk) 
+  storeItem(energie, energie)
+  storeItem(gezondheid, gezondheid) 
 }
 
 
@@ -35,7 +35,7 @@ function spelen() {
 }
 
 function keyPressedreset() {
-  if (keyCode === 8 && gezondheid == 0) {
+  if (keyCode === 8 && gezondheid == 0) 
     backSpacePressed = true;
     gezondheid = 100
     energie = 100
@@ -44,7 +44,7 @@ function keyPressedreset() {
     console.log(backSpacePressed)
   }
 
-}
+
 function etengeven() {
 
 
@@ -74,12 +74,16 @@ function draw() {
   }
   // hier word het honger nivea bijgehouden  doormiddel van een counter 
    counterh = counterh + 1
-  if (counterh === 120) {
-    if(counterh === 125)  
-      counterh = 0
-    honger = honger - 1;
+  if (counterh === 500) {
+     honger = honger  - 1;  
+    if(counterh === 550)  
+      counterh = 0 
+    honger = honger  - 1; 
+    if(honger < 0) honger = 0 
+    
+} 
     console.log(counterh)
     console.log(honger)
-  }
+  
 
 }
