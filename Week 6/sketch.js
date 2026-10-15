@@ -77,17 +77,25 @@ function draw() {
   if (counterh === 200) {
      honger = honger  - 1;  
   } 
-    if(counterh === 200){ 
+    if(counterh === 220){ 
       counterh = 0 
     } 
     {if(honger< 0) 
       honger = 0 
     }  
     
-      console.log(counterh)
-    console.log("honger" + honger)
+      console.log("counterh"+ counterh)
+    console.log("honger" + honger) 
+    
+    // hier word het energienivea bijgehouden door middel van een counter
+    counterE = counterE + 1 
+    if(counterE === 300){
+      energie = energie - 2;
+    } 
+
+    }
   
-} 
+
   
 
 
