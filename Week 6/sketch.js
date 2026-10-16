@@ -1,7 +1,8 @@
 let honger = 100
 let geluk = 100
 let energie = 100
-let gezondheid = 100
+let gezondheid = 100 
+let cleanlines = 100
 let imggameoverscreen;
 let counterh = 0
 let counterE = 0;
@@ -10,6 +11,7 @@ let counterGE = 0;
 let spelen 
 let slapen
 let schoonmaken 
+let counterS = 0
 
 // functies 
 function savescore() {
@@ -180,6 +182,8 @@ if(gezondheid < 0){
     counterG = 0
   }
   fill("blue")
-  text(geluk, 70, 50)
+  text(geluk, 70, 50) 
+
+  // hier word het schoonheidsniveu bijgehouden 
 
 } 
