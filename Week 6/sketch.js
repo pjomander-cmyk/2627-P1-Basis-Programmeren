@@ -67,7 +67,7 @@ text("energie",30,40)
 fill("blue")
 text("geluk",30,50)
 fill("red")
-text("gezondheid",30,60)
+text("gezondheid",9,60)
 
   // acties die gebeuren als de gezondheid 0 is 
 
