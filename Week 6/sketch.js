@@ -43,13 +43,12 @@ function functieSpelen() {
 }
 
 function keyPressedreset() {
-  if (keyCode === 8 && gezondheid == 0)
-    backSpacePressed = true;
-  gezondheid = 100
+  if (keyCode == 8){
   energie = 100
   geluk = 100
   honger = 100
-  console.log(backSpacePressed)
+  console.log("resetworks") 
+  } 
 }
 
 
@@ -130,10 +129,12 @@ function draw() {
     gezondheid = 75
   }
 if(energie < 20){
-  gezondheid = gezondheid - 0,1 ;
+  gezondheid = gezondheid - 1;
 } 
-if(energie === 0)
 
+if(gezondheid < 0){
+  gezondheid = 0
+}
 
 
   // hier word het energienivea bijgehouden door middel van een counter
