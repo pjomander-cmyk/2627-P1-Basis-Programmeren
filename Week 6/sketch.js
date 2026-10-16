@@ -185,5 +185,14 @@ if(gezondheid < 0){
   text(geluk, 70, 50) 
 
   // hier word het schoonheidsniveu bijgehouden 
-
+  counterS = counterS + 1
+  if(counterS === 400 ) { 
+    cleanlines = cleanlines  -1 
+  } 
+  if(cleanlines < 0 ){
+    cleanlines = 0
+  }
+if (counterS === 0 ){
+  counterS =0
+} 
 } 
