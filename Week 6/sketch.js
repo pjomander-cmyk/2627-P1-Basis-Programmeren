@@ -7,7 +7,9 @@ let counterh = 0
 let counterE = 0;
 let counterG = 0;
 let counterGE = 0;
-let spelen
+let spelen 
+let slapen
+let schoonmaken 
 
 // functies 
 function savescore() {
@@ -41,6 +43,15 @@ function functieSpelen() {
     energie = 0;
   }
 }
+function functieslapen(){
+  energie = energie + 100
+  if(energie> 100){
+    energie = 100;
+  } 
+  if (energie < 0) {
+    energie = 0;
+  }
+}
 
 function keyPressedreset() {
   if (keyCode == 8){
@@ -53,12 +64,8 @@ function keyPressedreset() {
 
 
 function etengeven() {
-
-
 }
-function slapen() {
 
-}
 function setup() {
   createCanvas(800, 800);
 
@@ -70,6 +77,15 @@ spelen.style("font-size", "16px");
 
 spelen.mousePressed(functieSpelen);
 
+
+// slapen verhoogt energie 
+slapen = createButton("slapen") 
+slapen.position(5,500);
+slapen.style("font-size", "16px");
+
+
+
+slapen.mousePressed(functieslapen)
 }
 
 function draw() {
