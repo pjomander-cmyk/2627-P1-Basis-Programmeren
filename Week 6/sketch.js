@@ -113,7 +113,14 @@ voeden.mousePressed(functievoeden)
 schoonmakenfunctie  = createButton("schoonmaken")
 schoonmakenfunctie.position(80,500) 
 schoonmakenfunctie.style("font-size", "16px");
-schoonmakenfunctie.mousePressed(functieschoonmaken)
+schoonmakenfunctie.mousePressed(functieschoonmaken) 
+
+
+// de opgeslagen data ophalen
+honger =  getItem("honger") 
+energie = getItem("energie") 
+geluk = getItem("geluk") 
+gezondheid = getItem("gezondheid") 
 
    
 
