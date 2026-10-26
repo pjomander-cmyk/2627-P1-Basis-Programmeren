@@ -17,10 +17,10 @@ let schoonmakenfunctie
 
 // functies 
 function savescore() {
-  storeItem(honger, honger)
-  storeItem(geluk, geluk)
-  storeItem(energie, energie)
-  storeItem(gezondheid, gezondheid)
+  storeItem("honger", honger)
+  storeItem("geluk", geluk)
+  //storeItem(energie, energie)
+  //storeItem(gezondheid, gezondheid)
 }
 
 function preLoad() {
@@ -117,10 +117,27 @@ schoonmakenfunctie.mousePressed(functieschoonmaken)
 
 
 // de opgeslagen data ophalen
-honger =  getItem("honger") 
-energie = getItem("energie") 
-geluk = getItem("geluk") 
-gezondheid = getItem("gezondheid") 
+if (getItem("honger") == null)
+  {
+    honger = 0;
+  }
+  else
+  {
+    honger = getItem("honger");
+  }
+
+if(getItem("geluk") == null)
+{
+  geluk = 100;
+}
+else 
+{
+ geluk = getItem("geluk")
+}
+// geluk = getItem("geluk") 
+// gezondheid= getItem("gezondheid") 
+
+
 
    
 
@@ -129,7 +146,7 @@ gezondheid = getItem("gezondheid")
 
 function draw() {
   background("green");
-
+  savescore() ;
   fill("gray")
   rect(1, 1, 100, 100)
   fill("red")
