@@ -1,4 +1,4 @@
-let honger = 100
+let honger = 0
 let geluk = 100
 let energie = 100
 let gezondheid = 100 
@@ -11,7 +11,9 @@ let counterGE = 0;
 let spelen 
 let slapen
 let schoonmaken 
-let counterS = 0
+let counterS = 0 
+let voeden 
+let schoonmakenfunctie
 
 // functies 
 function savescore() {
@@ -31,6 +33,12 @@ function gezondheideffecten() {
   image(imggameoverscreen, 50, 50, 50, 50)
 }
 
+function functievoeden(){
+  honger = honger - 10 
+  energie = energie + 5
+
+}
+
 function functieSpelen() {
   geluk = geluk + 10;
   energie = energie - 10;
@@ -46,7 +54,8 @@ function functieSpelen() {
   }
 }
 function functieslapen(){
-  energie = energie + 100
+  energie = energie + 100 
+  honger = hongert + 20
   if(energie> 100){
     energie = 100;
   } 
@@ -59,6 +68,12 @@ if(gezondheid > 100){
 } 
 
 }
+function  functieschoonmaken(){
+  gezondheid = gezondheid + 20
+  geluk = geluk - 10
+  }
+
+
 
 function keyPressedreset() {
   if (keyCode == 8){
@@ -70,8 +85,7 @@ function keyPressedreset() {
 }
 
 
-function etengeven() {
-}
+
 
 function setup() {
   createCanvas(800, 800);
@@ -80,8 +94,6 @@ function setup() {
 spelen = createButton("spelen");
 spelen.position(5, 400);
 spelen.style("font-size", "16px");
-
-
 spelen.mousePressed(functieSpelen);
 
 
@@ -89,10 +101,23 @@ spelen.mousePressed(functieSpelen);
 slapen = createButton("slapen") 
 slapen.position(5,500);
 slapen.style("font-size", "16px");
-
-
-
 slapen.mousePressed(functieslapen)
+
+// voeden verlaagt honger als je te veel geeft krijgt je tamigoshy damage
+voeden = createButton("voeden")
+voeden.position(80,400) 
+voeden.style("font-size", "16px");
+voeden.mousePressed(functievoeden)
+
+// schoonmaken verhoogt gezondheid maar verlaagt gezonheid 
+schoonmakenfunctie  = createButton("schoonmaken")
+schoonmakenfunctie.position(80,500) 
+schoonmakenfunctie.style("font-size", "16px");
+schoonmakenfunctie.mousePressed(functieschoonmaken)
+
+   
+
+
 }
 
 function draw() {
@@ -123,10 +148,7 @@ function draw() {
   counterh = counterh + 1;
   if (counterh >= 200) {
     counterh = 0;
-    honger = honger - 1;
-  }
-  if (honger < 0) {
-    honger = 0;
+    honger = honger + 1;
   }
 
   fill("orange")
@@ -134,10 +156,10 @@ function draw() {
 
 
   // hier wordt de gezondheid bijgehouden
-  if (honger > 100) {
+  if (honger <= -10 ) {
     gezondheid = 95
   }
-  if (honger < 50) {
+  if (honger > 100) {
     gezondheid = gezondheid - 1 
   }
   if (gezondheid < 0) {
