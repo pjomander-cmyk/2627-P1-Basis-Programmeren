@@ -52,7 +52,12 @@ function functieslapen(){
   } 
   if (energie < 0) {
     energie = 0;
-  }
+  } 
+gezondheid = gezondheid + 100
+if(gezondheid > 100){
+  gezondheid = 100 
+} 
+
 }
 
 function keyPressedreset() {
@@ -133,7 +138,7 @@ function draw() {
     gezondheid = 95
   }
   if (honger < 50) {
-    gezondheid = gezondheid - 1
+    gezondheid = gezondheid - 1 
   }
   if (gezondheid < 0) {
     gezondheid = 0
@@ -195,4 +200,7 @@ if(gezondheid < 0){
 if (counterS === 0 ){
   counterS =0
 } 
+if(cleanlines === 0){
+  gezondheid = gezondheid -1 
+}
 } 
