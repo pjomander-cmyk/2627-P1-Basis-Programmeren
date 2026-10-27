@@ -126,16 +126,34 @@ if (getItem("honger") == null)
     honger = getItem("honger");
   }
 
-if(getItem("geluk") == null)
+if(getItem("energie") == null)
 {
-  geluk = 100;
+  energie = 100;
 }
 else 
 {
- geluk = getItem("geluk")
+ energie= getItem("energie")
 }
-// geluk = getItem("geluk") 
-// gezondheid= getItem("gezondheid") 
+
+if(getItem("geluk") ==null) 
+{
+  geluk = 100;
+} 
+else
+{
+  geluk = getItem("geluk")
+}
+
+
+if(getItem("gezondheid") ==null)
+{
+  gezondheid = 100;
+}
+else 
+{
+  geluk = getItem("gezondheid")
+}
+
 
 
 
