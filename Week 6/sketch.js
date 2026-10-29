@@ -30,14 +30,14 @@ function savescore() {
   storeItem("gezondheid", gezondheid)
 }
 
-function preLoad() {
-  imggameoverscreen = loadImage("./asset/OIP.webp")
-  imageachtergrond = loadImage("./asset/achtergrond kopie.png")
-  imgcaracterdirty = loadImage("./asset/red panda dirty 600 x 600.png")
-  imgcaracterhappy = loadImage("./asset/red panda happy.png")
-  imgcaractersick = loadImage("./asset/Sick Red Panda Resting in the Forest kopie.png 600 x 600.png")
-  imgcaractertired = loadImage("./asset/red panda sleeping 600 x 600.png")
-  imgcaractersad = loadImage("./asset/red panda sad 600 x 600")
+function preload() {
+  imggameoverscreen = loadImage("asset/OIP.webp")
+  imageachtergrond = loadImage("asset/achtergrond kopie.png")
+  imgcaracterdirty = loadImage("asset/red panda dirty 600 x 600.png")
+  imgcaracterhappy = loadImage("asset/red panda happy.png")
+  imgcaractersick = loadImage("asset/Sick Red Panda Resting in the Forest kopie.png 600 x 600.png")
+  imgcaractertired = loadImage("asset/red panda sleeping 600 x 600.png")
+  imgcaractersad = loadImage("asset/red panda sad 600 x 600.png ")
 
 }
 function gezondheideffecten() {
@@ -169,7 +169,8 @@ function setup() {
 
 function draw() {
   background("white");
-  savescore();
+  savescore(); 
+   image(imageachtergrond, 0, 0, 800, 800);
   fill("gray")
   rect(1, 1, 100, 100)
   fill("red")
@@ -264,17 +265,20 @@ function draw() {
   if (counterS === 400) {
     cleanlines = cleanlines - 1
   }
+
   if (cleanlines < 0) {
     cleanlines = 0
   }
+
   if (counterS === 0) {
     counterS = 0
   }
+
   if (cleanlines === 0) {
     gezondheid = gezondheid - 1
   }
-  {
-    image(imageachtergrond, 10, 10, 100, 100);
-  }
+
+  
+   
 
 } 
