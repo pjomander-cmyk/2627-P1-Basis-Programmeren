@@ -20,6 +20,7 @@ let imgcaractersick
 let imgcaracterdirty
 let imgcaractertired
 let imgcaractersad
+let backgroundcounter = 0;
 
 // functies 
 function savescore() {
@@ -29,14 +30,14 @@ function savescore() {
   storeItem("gezondheid", gezondheid)
 }
 
-function preLoad() {
-  imggameoverscreen = Loadimage("./asset/OIP.webp")
-  imageachtergrond = Loadimage("./asset/achtergrond kopie.png")
-  imgcaracterdirty = Loadimage(",/asset/red panda dirty 600 x 600.png")
-  imgcaracterhappy = Loadimage(",/asset/red panda happy.png")
-  imgcaractersick = Loadimage(",/asset/Sick Red Panda Resting in the Forest kopie.png 600 x 600.png")
-  imgcaractertired = Loadimage(",/asset/red panda sleeping 600 x 600.png")
-  imgcaractersad = Loadimage(",/asset/red panda sad 600 x 600")
+function preload() {
+  imggameoverscreen = loadImage("./asset/OIP.webp")
+  imageachtergrond = loadImage("./asset/achtergrond kopie.png")
+  imgcaracterdirty = loadImage("./asset/red panda dirty 600 x 600.png")
+  imgcaracterhappy = loadImage("./asset/red panda happy.png")
+  imgcaractersick = loadImage("./asset/Sick Red Panda Resting in the Forest kopie.png 600 x 600.png")
+  imgcaractertired = loadImage("./asset/red panda sleeping 600 x 600.png")
+  imgcaractersad = loadImage("./asset/red panda sad 600 x 600")
 
 }
 function gezondheideffecten() {
@@ -98,7 +99,7 @@ function keyPressedreset() {
 }
 
 
-   
+
 
 
 function setup() {
@@ -168,7 +169,7 @@ function setup() {
 
 function draw() {
   background("white");
-  savescore(); 
+  savescore();
   fill("gray")
   rect(1, 1, 100, 100)
   fill("red")
@@ -180,16 +181,14 @@ function draw() {
   fill("blue")
   text("geluk", 25, 50)
   fill("red")
-  text("gezondheid", 9, 60) 
+  text("gezondheid", 9, 60)
 
 
 
 
 
-  //laad de verschillende images `
- {
-image(imageachtergrond, 10, 10, 100, 100);
-}
+
+
 
 
   // acties die gebeuren als de gezondheid 0 is 
@@ -280,6 +279,9 @@ image(imageachtergrond, 10, 10, 100, 100);
   }
   if (cleanlines === 0) {
     gezondheid = gezondheid - 1
-  } 
+  }
+  {
+    image(imageachtergrond, 10, 10, 100, 100);
+  }
 
 } 
