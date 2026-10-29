@@ -32,11 +32,11 @@ function savescore() {
 function preLoad() {
   imggameoverscreen = Loadimage("./asset/OIP.webp")
   imageachtergrond = Loadimage("./asset/achtergrond kopie.png")
-  imgcaracterdirty = Loadimage
-  imgcaracterhappy = Loadimage
-  imgcaractersick = Loadimage
-  imgcaractertired = Loadimage
-  imgcaractersad = Loadimage
+  imgcaracterdirty = Loadimage(",/asset/")
+  imgcaracterhappy = Loadimage(",/asset/panda happy 800 x 800.png")
+  imgcaractersick = Loadimage(",/asset/rode panda ziek 800 x 800.png")
+  imgcaractertired = Loadimage(",/asset/")
+  imgcaractersad = Loadimage(",/asset/")
 
 }
 function gezondheideffecten() {
