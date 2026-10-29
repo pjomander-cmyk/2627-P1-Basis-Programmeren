@@ -33,9 +33,9 @@ function preLoad() {
   imggameoverscreen = Loadimage("./asset/OIP.webp")
   imageachtergrond = Loadimage("./asset/achtergrond kopie.png")
   imgcaracterdirty = Loadimage(",/asset/")
-  imgcaracterhappy = Loadimage(",/asset/panda happy 800 x 800.png")
-  imgcaractersick = Loadimage(",/asset/rode panda ziek 800 x 800.png")
-  imgcaractertired = Loadimage(",/asset/")
+  imgcaracterhappy = Loadimage(",/asset/")
+  imgcaractersick = Loadimage(",/asset/")
+  imgcaractertired = Loadimage(",/asset/red panda sleeping 600 x 600.png")
   imgcaractersad = Loadimage(",/asset/")
 
 }
