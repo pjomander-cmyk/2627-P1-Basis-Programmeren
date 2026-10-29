@@ -278,7 +278,10 @@ function draw() {
     gezondheid = gezondheid - 1
   }
 
-  
+// hier wordt de status van de tamegoish getoont in een afbeelding 
+if(cleanlines <= 30 ){
+  imggameoverscreen(imgcaracterdirty, 0,0,600,600)
+}
    
 
 } 
