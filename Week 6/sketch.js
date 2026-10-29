@@ -32,11 +32,11 @@ function savescore() {
 function preLoad() {
   imggameoverscreen = Loadimage("./asset/OIP.webp")
   imageachtergrond = Loadimage("./asset/achtergrond kopie.png")
-  imgcaracterdirty = Loadimage(",/asset/")
-  imgcaracterhappy = Loadimage(",/asset/")
+  imgcaracterdirty = Loadimage(",/asset/red panda dirty 600 x 600.png")
+  imgcaracterhappy = Loadimage(",/asset/red panda happy.png")
   imgcaractersick = Loadimage(",/asset/Sick Red Panda Resting in the Forest kopie.png 600 x 600.png")
   imgcaractertired = Loadimage(",/asset/red panda sleeping 600 x 600.png")
-  imgcaractersad = Loadimage(",/asset/")
+  imgcaractersad = Loadimage(",/asset/red panda sad 600 x 600")
 
 }
 function gezondheideffecten() {
@@ -68,7 +68,7 @@ function functieSpelen() {
 }
 function functieslapen() {
   energie = energie + 100
-  honger = hongert + 20
+  honger = honger + 20
   if (energie > 100) {
     energie = 100;
   }
@@ -98,6 +98,7 @@ function keyPressedreset() {
 }
 
 
+   
 
 
 function setup() {
@@ -163,13 +164,11 @@ function setup() {
 
 
 
-
-
 }
 
 function draw() {
-  background("green");
-  savescore();
+  background("white");
+  savescore(); 
   fill("gray")
   rect(1, 1, 100, 100)
   fill("red")
@@ -181,7 +180,17 @@ function draw() {
   fill("blue")
   text("geluk", 25, 50)
   fill("red")
-  text("gezondheid", 9, 60)
+  text("gezondheid", 9, 60) 
+
+
+
+
+
+  //laad de verschillende images `
+ {
+image(imageachtergrond, 10, 10, 100, 100);
+}
+
 
   // acties die gebeuren als de gezondheid 0 is 
 
@@ -271,5 +280,6 @@ function draw() {
   }
   if (cleanlines === 0) {
     gezondheid = gezondheid - 1
-  }
+  } 
+
 } 
