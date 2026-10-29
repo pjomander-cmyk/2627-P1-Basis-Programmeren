@@ -30,7 +30,7 @@ function savescore() {
   storeItem("gezondheid", gezondheid)
 }
 
-function preload() {
+function preLoad() {
   imggameoverscreen = loadImage("./asset/OIP.webp")
   imageachtergrond = loadImage("./asset/achtergrond kopie.png")
   imgcaracterdirty = loadImage("./asset/red panda dirty 600 x 600.png")
@@ -182,13 +182,6 @@ function draw() {
   text("geluk", 25, 50)
   fill("red")
   text("gezondheid", 9, 60)
-
-
-
-
-
-
-
 
 
   // acties die gebeuren als de gezondheid 0 is 
