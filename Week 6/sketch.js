@@ -34,7 +34,7 @@ function preLoad() {
   imageachtergrond = Loadimage("./asset/achtergrond kopie.png")
   imgcaracterdirty = Loadimage(",/asset/")
   imgcaracterhappy = Loadimage(",/asset/")
-  imgcaractersick = Loadimage(",/asset/")
+  imgcaractersick = Loadimage(",/asset/Sick Red Panda Resting in the Forest kopie.png 600 x 600.png")
   imgcaractertired = Loadimage(",/asset/red panda sleeping 600 x 600.png")
   imgcaractersad = Loadimage(",/asset/")
 
