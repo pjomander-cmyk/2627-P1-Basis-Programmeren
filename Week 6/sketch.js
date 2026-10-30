@@ -28,6 +28,7 @@ function savescore() {
   storeItem("geluk", geluk)
   storeItem("energie", energie)
   storeItem("gezondheid", gezondheid)
+  storeItem("cleanlines", cleanlines)
 }
 
 function preload() {
@@ -93,16 +94,27 @@ function functieschoonmaken() {
 }
 
 
+function keyPressed() {
+  if (keyCode === BACKSPACE) {
+    energie = 100;
+    geluk = 100;
+    honger = 0;
+    gezondheid = 100;
+    cleanlines = 0;
 
-function keyPressedreset() {
-  if (keyCode == 8) {
-    energie = 100
-    geluk = 100
-    honger = 100
-    console.log("resetworks")
+    
+    counterh = 0;
+    counterE = 0;
+    counterG = 0;
+    counterGE = 0;
+    counterS = 0;
+
+    
+    console.log("Reset works");
+
+    savescore();
   }
 }
-
 
 
 
@@ -311,23 +323,32 @@ if(honger >= 100){
     gezondheid = gezondheid - 1
   } 
   fill("purple") 
-  text(cleanlines, 70,70)
+  text(cleanlines, 70,70) 
+
+  if (counterS >= 400) {
+  cleanlines = cleanlines + 1
+  counterS = 0
+}
 
 // hier wordt de status van de tamegoish getoont in een afbeelding 
-if(cleanlines >= 60 ){
-  image(imgcaracterdirty, 150,100,400,400)
-} 
-if(geluk <= 30){
-  image(imgcaractersad, 150,100,400,400)
-} 
-if(geluk >= 30 && gezondheid >= 90 && cleanlines <= 60 && honger <=70 && energie >= 40){
-  image(imgcaracterhappy,  150,100,400,400)
+
+if (gezondheid <= 0) {
+  image(imggameoverscreen, 150, 100, 400, 400);
 }
-if(energie <= 30 ){
-  image(imgcaractertired, 150,100,400,400)
+else if (gezondheid <= 80) {
+  image(imgcaractersick, 150, 100, 400, 400);
 }
-if(gezondheid <= 80){
-  image(imgcaractersick, 150,100,400,400)
+else if (energie <= 30) {
+  image(imgcaractertired, 150, 100, 400, 400);
+}
+else if (cleanlines >= 60) {
+  image(imgcaracterdirty, 150, 100, 400, 400);
+}
+else if (geluk <= 30) {
+  image(imgcaractersad, 150, 100, 400, 400);
+}
+else {
+  image(imgcaracterhappy, 150, 100, 400, 400);
 }
   
 
