@@ -280,14 +280,16 @@ function draw() {
 
 // hier wordt de status van de tamegoish getoont in een afbeelding 
 if(cleanlines <= 30 ){
-  image(imgcaracterdirty, 0,0,600,600)
+  image(imgcaracterdirty, 150,100,400,400)
 } 
 if(geluk <= 30){
-  image(imgcaractersad, 0,0,600,600)
+  image(imgcaractersad, 150,100,400,400)
 } 
 if(geluk >+ 30 && gezondheid >+ 90 && cleanlines >= 30 && honger <=70 && energie >= 40){
   image(imgcaracterhappy,  150,100,400,400)
 }
-   
+if(energie <= 30 ){
+  image(imgcaractertired, 150,100,400,400)
+}
 
 } 
