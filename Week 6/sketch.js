@@ -20,7 +20,8 @@ let imgcaractersick
 let imgcaracterdirty
 let imgcaractertired
 let imgcaractersad
-let backgroundcounter = 0;
+let backgroundcounter = 0; 
+let reset
 
 // functies 
 function savescore() {
@@ -84,7 +85,6 @@ function functieslapen() {
 
 }
 function functieschoonmaken() {
-  gezondheid = gezondheid + 20
   geluk = geluk - 10 
   cleanlines = cleanlines -50 
 
@@ -94,33 +94,31 @@ function functieschoonmaken() {
 }
 
 
-function keyPressed() {
-  if (keyCode === BACKSPACE) {
-    energie = 100;
-    geluk = 100;
-    honger = 0;
-    gezondheid = 100;
-    cleanlines = 0;
+function functiereset(){
+ honger = 0;
+  geluk = 100;
+  energie = 100;
+  gezondheid = 100;
+  cleanlines = 0;
 
-    
-    counterh = 0;
-    counterE = 0;
-    counterG = 0;
-    counterGE = 0;
-    counterS = 0;
-
-    
-    console.log("Reset works");
-
-    savescore();
-  }
+  counterh = 0;
+  counterE = 0;
+  counterG = 0;
+  counterS = 0;
 }
 
 
 
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(800, 800); 
+
+  // reset alle stats naar hun beginwaarde (vervanging voor een dedicated reset knop die niet werkte)
+// reset knop
+reset = createButton("reset");
+reset.position(5, 600);
+reset.style("font-size", "16px");
+reset.mousePressed(functiereset);
 
   // spelen verhoogt geluk maar verlaagt energie
   spelen = createButton("spelen");
