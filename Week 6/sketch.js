@@ -20,7 +20,7 @@ let imgcaractersick
 let imgcaracterdirty
 let imgcaractertired
 let imgcaractersad
-let backgroundcounter = 0; 
+let backgroundcounter = 0;
 let reset
 
 // functies 
@@ -85,17 +85,17 @@ function functieslapen() {
 
 }
 function functieschoonmaken() {
-  geluk = geluk - 10 
-  cleanlines = cleanlines -50 
+  geluk = geluk - 10
+  cleanlines = cleanlines - 50
 
-  if(cleanlines <0 ) {
+  if (cleanlines < 0) {
     cleanlines = 0
   }
 }
 
 
-function functiereset(){
- honger = 0;
+function functiereset() {
+  honger = 0;
   geluk = 100;
   energie = 100;
   gezondheid = 100;
@@ -111,14 +111,14 @@ function functiereset(){
 
 
 function setup() {
-  createCanvas(800, 800); 
+  createCanvas(800, 800);
 
   // reset alle stats naar hun beginwaarde (vervanging voor een dedicated reset knop die niet werkte)
-// reset knop
-reset = createButton("reset");
-reset.position(5, 600);
-reset.style("font-size", "16px");
-reset.mousePressed(functiereset);
+  // reset knop
+  reset = createButton("reset");
+  reset.position(5, 600);
+  reset.style("font-size", "16px");
+  reset.mousePressed(functiereset);
 
   // spelen verhoogt geluk maar verlaagt energie
   spelen = createButton("spelen");
@@ -175,12 +175,12 @@ reset.mousePressed(functiereset);
   else {
     geluk = getItem("gezondheid")
   }
-if(getItem("cleanlines") == null){
-  cleanlines = 0;
-}
-else{
-  cleanlines = getItem("cleanlines")
-}
+  if (getItem("cleanlines") == null) {
+    cleanlines = 0;
+  }
+  else {
+    cleanlines = getItem("cleanlines")
+  }
 
 
 
@@ -189,8 +189,8 @@ else{
 
 function draw() {
   background("white");
-  savescore(); 
-   image(imageachtergrond, 0, 0, 800, 800);
+  savescore();
+  image(imageachtergrond, 0, 0, 800, 800);
   fill("gray")
   rect(1, 1, 100, 100)
   fill("red")
@@ -202,30 +202,30 @@ function draw() {
   fill("blue")
   text("geluk", 25, 50)
   fill("red")
-  text("gezondheid", 9, 60) 
-  fill("purple") 
-  text("cleanlines" ,9,70) 
+  text("gezondheid", 9, 60)
+  fill("purple")
+  text("cleanlines", 9, 70)
 
 
 
 
 
   //  dit zorgt dat de waardes niet boven 100 komen
-if(geluk >= 100){
-  geluk = 100 
-} 
-if(cleanlines >= 100){
-  cleanlines = 100
-} 
-if(honger <= -15){
-  honger = -15
-} 
-if(energie >= 100){
-  energie = 100
-}
-if(honger >= 100){
-  honger = 100
-}
+  if (geluk >= 100) {
+    geluk = 100
+  }
+  if (cleanlines >= 100) {
+    cleanlines = 100
+  }
+  if (honger <= -15) {
+    honger = -15
+  }
+  if (energie >= 100) {
+    energie = 100
+  }
+  if (honger >= 100) {
+    honger = 100
+  }
 
 
   // acties die gebeuren als de gezondheid 0 is 
@@ -317,37 +317,37 @@ if(honger >= 100){
     counterS = 0
   }
 
-  if (cleanlines === 0) {
+  if (cleanlines === 100) {
     gezondheid = gezondheid - 1
-  } 
-  fill("purple") 
-  text(cleanlines, 70,70) 
+  }
+  fill("purple")
+  text(cleanlines, 70, 70)
 
   if (counterS >= 400) {
-  cleanlines = cleanlines + 1
-  counterS = 0
-}
+    cleanlines = cleanlines + 1
+    counterS = 0
+  }
 
-// hier wordt de status van de tamegoish getoont in een afbeelding 
+  // hier wordt de status van de tamegoish getoont in een afbeelding 
 
-if (gezondheid <= 0) {
-  image(imggameoverscreen, 150, 100, 400, 400);
-}
-else if (gezondheid <= 80) {
-  image(imgcaractersick, 150, 100, 400, 400);
-}
-else if (energie <= 30) {
-  image(imgcaractertired, 150, 100, 400, 400);
-}
-else if (cleanlines >= 60) {
-  image(imgcaracterdirty, 150, 100, 400, 400);
-}
-else if (geluk <= 30) {
-  image(imgcaractersad, 150, 100, 400, 400);
-}
-else {
-  image(imgcaracterhappy, 150, 100, 400, 400);
-}
-  
+  if (gezondheid <= 0) {
+    image(imggameoverscreen, 150, 100, 400, 400);
+  }
+  else if (gezondheid <= 80) {
+    image(imgcaractersick, 150, 100, 400, 400);
+  }
+  else if (energie <= 30) {
+    image(imgcaractertired, 150, 100, 400, 400);
+  }
+  else if (cleanlines >= 60) {
+    image(imgcaracterdirty, 150, 100, 400, 400);
+  }
+  else if (geluk <= 30) {
+    image(imgcaractersad, 150, 100, 400, 400);
+  }
+  else {
+    image(imgcaracterhappy, 150, 100, 400, 400);
+  }
+
 
 } 
