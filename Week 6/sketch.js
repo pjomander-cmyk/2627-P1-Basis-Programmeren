@@ -2,7 +2,7 @@ let honger = 0
 let geluk = 100
 let energie = 100
 let gezondheid = 100
-let cleanlines = 100
+let cleanlines = 0
 let imggameoverscreen;
 let counterh = 0
 let counterE = 0;
@@ -84,7 +84,12 @@ function functieslapen() {
 }
 function functieschoonmaken() {
   gezondheid = gezondheid + 20
-  geluk = geluk - 10
+  geluk = geluk - 10 
+  cleanlines = cleanlines -50 
+
+  if(cleanlines <0 ) {
+    cleanlines = 0
+  }
 }
 
 
@@ -160,7 +165,12 @@ function setup() {
   else {
     geluk = getItem("gezondheid")
   }
-
+if(getItem("cleanlines") == null){
+  cleanlines = 0;
+}
+else{
+  cleanlines = getItem("cleanlines")
+}
 
 
 
@@ -182,12 +192,35 @@ function draw() {
   fill("blue")
   text("geluk", 25, 50)
   fill("red")
-  text("gezondheid", 9, 60)
+  text("gezondheid", 9, 60) 
+  fill("purple") 
+  text("cleanlines" ,9,70) 
+
+
+
+
+
+  //  dit zorgt dat de waardes niet boven 100 komen
+if(geluk >= 100){
+  geluk = 100 
+} 
+if(cleanlines >= 100){
+  cleanlines = 100
+} 
+if(honger <= -15){
+  honger = -15
+} 
+if(energie >= 100){
+  energie = 100
+}
+if(honger >= 100){
+  honger = 100
+}
 
 
   // acties die gebeuren als de gezondheid 0 is 
 
-  if (gezondheid == 0) {
+  if (gezondheid <= 0) {
     fill("black")
     text("huisdierdood je hebt gefaalt", 200, 100)
     text("druk op backspace om te reseten", 300, 200)
@@ -263,7 +296,7 @@ function draw() {
   // hier word het schoonheidsniveu bijgehouden 
   counterS = counterS + 1
   if (counterS === 400) {
-    cleanlines = cleanlines - 1
+    cleanlines = cleanlines + 1
   }
 
   if (cleanlines < 0) {
@@ -276,20 +309,26 @@ function draw() {
 
   if (cleanlines === 0) {
     gezondheid = gezondheid - 1
-  }
+  } 
+  fill("purple") 
+  text(cleanlines, 70,70)
 
 // hier wordt de status van de tamegoish getoont in een afbeelding 
-if(cleanlines <= 30 ){
+if(cleanlines >= 60 ){
   image(imgcaracterdirty, 150,100,400,400)
 } 
 if(geluk <= 30){
   image(imgcaractersad, 150,100,400,400)
 } 
-if(geluk >+ 30 && gezondheid >+ 90 && cleanlines >= 30 && honger <=70 && energie >= 40){
+if(geluk >= 30 && gezondheid >= 90 && cleanlines <= 60 && honger <=70 && energie >= 40){
   image(imgcaracterhappy,  150,100,400,400)
 }
 if(energie <= 30 ){
   image(imgcaractertired, 150,100,400,400)
 }
+if(gezondheid <= 80){
+  image(imgcaractersick, 150,100,400,400)
+}
+  
 
 } 
