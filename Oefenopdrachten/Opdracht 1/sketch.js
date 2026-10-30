@@ -11,13 +11,11 @@ let b9
 let b10
 let b11
 let b12
-
 let w1 = ""
 let w2 = ""
 let w3 = ""
-let w4 = ""
+let w4 = "" 
 let w5 = ""
-
 let antwoord = ""
 
 function setup() {
